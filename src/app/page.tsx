@@ -10,25 +10,28 @@ export type SkillType = Record<string, string[]>;
 
 export default async function Page() {
   const skills: SkillType = {
-    "Tech Stack": ["Next.js", "React.js", "Tailwind CSS", "ShadCN", "Resend"],
+    "Tech Stack": ["Next.js", "React.js", "Tailwind CSS", "shadcn/ui"],
     "Programming Languages": [
-      "Java",
       "JavaScript",
       "TypeScript",
       "Python",
+      "Java",
       "Go",
       "C++",
+      "PHP",
+      "HTML",
+      "CSS",
       "Visual Basic .NET",
     ],
     Databases: [
-      "SingleStore",
-      "Redis",
       "PostgresSQL",
       "MySQL",
       "MongoDB",
+      "Redis",
       "SQLite",
+      "SingleStore",
     ],
-    Tools: ["Git", "Docker", "Figma", "Maven", "Gradle", "JUnit"],
+    Tools: ["Git", "Docker", "Maven", "Gradle", "JUnit", "Figma"],
   };
 
   return (
