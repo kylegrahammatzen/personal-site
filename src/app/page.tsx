@@ -148,18 +148,6 @@ export default async function Page() {
           ))}
         </div>
       </div>
-
-      <footer className="flex justify-between items-center pt-6">
-        <h2 className="text-xl font-semibold">Follow me</h2>
-        <div className="flex space-x-4">
-          <Link href="https://instagram.com/kgm.digital">
-            <InstagramIcon className="w-6 h-6" />
-          </Link>
-          <Link href="https://linkedin.com/in/kylegrahammatzen/">
-            <LinkedInIcon className="w-6 h-6" />
-          </Link>
-        </div>
-      </footer>
     </div>
   );
 }
