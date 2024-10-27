@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
-import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Kyle Graham Matzen",
-  description:
-    "A software engineer with over a decade of programming experience and a year of experience in web development.",
+  title: "Linear Algebra Grade Calculator",
+  description: "Calculates grade for MATH01210",
 };
 
 export default function RootLayout({
