@@ -1,7 +1,6 @@
-import { ThemeProvider } from "@/providers/theme-provider";
-import { SiteHeader } from "@/components/site-header";
-import "@/styles/globals.css";
-
+import { ThemeProvider } from "@/providers/theme-provider"
+import { SiteHeader } from "@/components/site-header"
+import "@/styles/globals.css"
 import localFont from 'next/font/local'
 
 const metroSans = localFont({
@@ -31,7 +30,7 @@ export default function RootLayout(props: RootLayoutProps) {
       <body>
         <div className='Root'>
           <ThemeProvider defaultTheme="dark">
-            <div className="container mx-auto px-4 py-8 max-w-3xl">
+            <div className="container mx-auto px-8 py-16 max-w-2xl">
               <SiteHeader />
               <main>{props.children}</main>
             </div>

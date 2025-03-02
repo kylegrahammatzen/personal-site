@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --background: #fff;
+    --background: #fafafa;
     --text: #000000;
     --scrollbar-track: #f1f1f1;
     --scrollbar-thumb: #c1c1c1;

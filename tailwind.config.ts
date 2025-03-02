@@ -5,10 +5,15 @@ export default {
   content: ["./src/**/*.tsx"],
   theme: {
     extend: {
+      colors: {
+        background: 'var(--background)',
+        text: 'var(--text)'
+      },
       fontFamily: {
-        sans: ["var(--font-geist-sans)", ...fontFamily.sans],
+        sans: ['var(--font-metro-sans)']
       },
     },
   },
-  plugins: [],
+  darkMode: 'class',
+  plugins: []
 } satisfies Config;
