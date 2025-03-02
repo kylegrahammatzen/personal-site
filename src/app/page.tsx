@@ -17,23 +17,18 @@ export default function Home() {
         description={
           <p className="font-medium">
             I'm Kyle, a US-based engineer from West Deptford, New Jersey. Currently pursuing my Computer Science
-            degree at Rowan University while building software solutions for clients worldwide.
+            degree at Rowan University while building software for clients worldwide.
           </p>
         }
       />
 
       <SitePageSection>
         <p>
-          I started my career as a freelancer in 2014 and have since contributed to projects with over 15.4
-          million downloads. My work spans full-stack development, game infrastructure, and business strategy,
-          focusing on creating scalable solutions for real-world problems.
+          I build scalable software systems that power applications used by thousands. My expertise includes distributed systems, API design, and cloud infrastructure.
         </p>
 
         <p>
-          Currently, I'm working on <Link href="https://previgil.com">Previgil</Link>, a platform that
-          simplifies domain management across various services, and{" "}
-          <Link href="https://bans.io">Bans.io</Link>, a multi-game punishment tracking system used by
-          gaming communities worldwide.
+          As an entrepreneur, I've launched startups that solve real business challenges. Currently working on <Link href="https://previgil.com" className="underline text-blue-600 hover:text-blue-800">Previgil</Link> for domain management, <Link href="https://bans.io" className="underline text-blue-600 hover:text-blue-800">Bans.io</Link> for gaming communities, and <Link href="#" className="underline text-blue-600 hover:text-blue-800">MailCurate</Link> for interactive emails. <Link href="/about" className="underline text-blue-600 hover:text-blue-800">Learn more about me</Link>.
         </p>
       </SitePageSection>
     </SiteContainer>
