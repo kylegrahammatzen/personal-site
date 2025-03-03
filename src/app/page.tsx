@@ -1,6 +1,10 @@
+import { SiteConnectSection } from "@/components/site-connect-section"
 import { SiteContainer } from "@/components/site-container"
 import { SitePageHeader } from "@/components/site-page-header"
 import { SitePageSection } from "@/components/site-page-section"
+import { SiteProjectCardProps, SiteProjectsSection } from "@/components/site-projects-section"
+import { Separator } from "@/components/ui/separator"
+import { Github, Linkedin, Twitter } from "lucide-react"
 import Link from "next/link"
 
 export default function Home() {
@@ -8,6 +12,49 @@ export default function Home() {
     "Software Engineer",
     "Entrepreneur",
     "Founder",
+  ]
+
+  const projects: SiteProjectCardProps[] = [
+    {
+      icon: "🚀",
+      title: "BetterAuth Boilerplate",
+      description: "Next.js starter with Drizzle ORM, organizations and invitation management",
+      url: "https://github.com/kylegrahammatzen/betterauth-boilerplate",
+      date: "November 2024"
+    },
+    {
+      icon: "🔐",
+      title: "Authbase",
+      description: "Email/password authentication system for Next.js 14 with access/refresh tokens",
+      url: "https://github.com/kylegrahammatzen/authbase",
+      date: "October 2024"
+    },
+    {
+      icon: "🎨",
+      title: "UI",
+      description: "Private UI library built on top of Base UI to replace shadcn for personal projects",
+      url: "https://github.com/kylegrahammatzen/ui",
+      date: "February 2025"
+    }
+  ];
+
+
+  const socialLinks = [
+    {
+      platform: "X",
+      url: "https://x.com/kgmatzen",
+      icon: <Twitter size={18} className="text-gray-600 dark:text-gray-300" />
+    },
+    {
+      platform: "LinkedIn",
+      url: "https://www.linkedin.com/in/kylegrahammatzen/",
+      icon: <Linkedin size={18} className="text-gray-600 dark:text-gray-300" />
+    },
+    {
+      platform: "GitHub",
+      url: "https://github.com/kylegrahammatzen",
+      icon: <Github size={18} className="text-gray-600 dark:text-gray-300" />
+    }
   ]
 
   return (
@@ -28,9 +75,20 @@ export default function Home() {
         </p>
 
         <p>
-          As an entrepreneur, I've launched startups that solve real business challenges. Currently working on <Link href="https://previgil.com" className="underline text-blue-600 hover:text-blue-800">Previgil</Link> for domain management, <Link href="https://bans.io" className="underline text-blue-600 hover:text-blue-800">Bans.io</Link> for gaming communities, and <Link href="#" className="underline text-blue-600 hover:text-blue-800">MailCurate</Link> for interactive emails. <Link href="/about" className="underline text-blue-600 hover:text-blue-800">Learn more about me</Link>.
+          As an entrepreneur, I've launched startups that solve real business challenges. Currently working on <Link href="https://previgil.com" className="font-medium text-blue-600 hover:underline dark:text-blue-400">Previgil</Link> for domain management, <Link href="https://bans.io" className="font-medium text-blue-600 hover:underline dark:text-blue-400">Bans.io</Link> for gaming communities, and <Link href="#" className="font-medium text-blue-600 hover:underline dark:text-blue-400">MailCurate</Link> for interactive emails. <Link href="/about" className="font-medium text-blue-600 hover:underline dark:text-blue-400">Learn more about me</Link>.
         </p>
       </SitePageSection>
+
+      <Separator className="my-8" />
+
+      <SiteProjectsSection projects={projects} />
+
+      <Separator className="my-8" />
+
+      <SiteConnectSection socialLinks={socialLinks} email={{
+        address: "hello@kylegm.com",
+        label: "Email me"
+      }} />
     </SiteContainer>
   )
 }

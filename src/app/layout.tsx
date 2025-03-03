@@ -29,7 +29,7 @@ export default function RootLayout(props: RootLayoutProps) {
     <html lang='en' className={`${metroSans.variable}`}>
       <body>
         <div className='Root'>
-          <ThemeProvider defaultTheme="dark">
+          <ThemeProvider defaultTheme="system">
             <div className="container mx-auto px-8 py-16 max-w-2xl">
               <SiteHeader />
               <main>{props.children}</main>

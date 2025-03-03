@@ -1,6 +1,6 @@
 'use client'
 
-import React, { createContext, useContext, useEffect, useState } from 'react'
+import { createContext, use, useEffect, useState } from 'react'
 
 type Theme = 'light' | 'dark' | 'system'
 
@@ -9,23 +9,30 @@ type ThemeProviderProps = {
     defaultTheme?: Theme
 }
 
-type ThemeContextType = {
+type ThemeContext = {
     theme: Theme
     setTheme: (theme: Theme) => void
 }
 
-const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
+const ThemeContext = createContext<ThemeContext | null>(null)
 
-const ThemeProvider = ({
-    children,
-    defaultTheme = 'system'
-}: ThemeProviderProps) => {
+export const useTheme = () => {
+    const context = use(ThemeContext)
+    if (!context) {
+        throw new Error('useTheme must be used within a ThemeProvider')
+    }
+    return context
+}
+
+export const ThemeProvider = (props: ThemeProviderProps) => {
+    const initialTheme = props.defaultTheme || 'system'
+
     const [theme, setTheme] = useState<Theme>(() => {
-        if (typeof window !== 'undefined') {
+        if (typeof window !== 'undefined' && initialTheme !== 'system') {
             const storedTheme = localStorage.getItem('theme') as Theme | null
-            return storedTheme || defaultTheme
+            return storedTheme || initialTheme
         }
-        return defaultTheme
+        return initialTheme
     })
 
     useEffect(() => {
@@ -42,7 +49,9 @@ const ThemeProvider = ({
             root.classList.add(theme)
         }
 
-        localStorage.setItem('theme', theme)
+        if (theme !== 'system') {
+            localStorage.setItem('theme', theme)
+        }
     }, [theme])
 
     useEffect(() => {
@@ -59,22 +68,19 @@ const ThemeProvider = ({
         return () => mediaQuery.removeEventListener('change', handleChange)
     }, [theme])
 
-    const value = {
-        theme,
-        setTheme: (newTheme: Theme) => {
-            setTheme(newTheme)
-        }
-    }
-
-    return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
+    return (
+        <ThemeContext.Provider
+            value={{
+                theme,
+                setTheme: (newTheme: Theme) => {
+                    setTheme(newTheme)
+                    if (newTheme === 'system') {
+                        localStorage.removeItem('theme')
+                    }
+                }
+            }}
+        >
+            {props.children}
+        </ThemeContext.Provider>
+    )
 }
-
-const useTheme = () => {
-    const context = useContext(ThemeContext)
-    if (context === undefined) {
-        throw new Error('useTheme must be used within a ThemeProvider')
-    }
-    return context
-}
-
-export { ThemeProvider, useTheme }
