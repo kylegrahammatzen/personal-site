@@ -18,7 +18,7 @@ export const card = tv({
       default: {
         base: [
           // background color
-          "bg-gray-50 dark:bg-[#2a2a2a]",
+          "bg-gray-50 dark:bg-[#18181b]",
           // text color
           "text-gray-900 dark:text-[#f2f2f2]",
           // border color
