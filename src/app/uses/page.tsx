@@ -172,7 +172,7 @@ export default function UsesPage() {
       </SitePageSection>
 
       <SitePageSection>
-        <h2 className="mb-4 text-xl font-semibold">Everyday Gear</h2>
+        <h2 className="mb-4 text-xl font-semibold">Everyday</h2>
         <SiteUsesGrid items={gearItems} />
       </SitePageSection>
     </SiteContainer>
