@@ -2,7 +2,6 @@ import { SiteContainer } from "@/components/site-container";
 import { SiteItems } from "@/components/site-items";
 import { SitePageHeader } from "@/components/site-page-header";
 import { SitePageSection } from "@/components/site-page-section";
-import { SiteSoftwareGrid } from "@/components/site-software-grid";
 import { SiteUsesGrid } from "@/components/site-uses-grid";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
