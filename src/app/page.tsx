@@ -79,11 +79,7 @@ export default function Home() {
         </p>
       </SitePageSection>
 
-      <Separator className="my-8" />
-
       <SiteProjectsSection projects={projects} />
-
-      <Separator className="my-8" />
 
       <SiteConnectSection socialLinks={socialLinks} email={{
         address: "hello@kylegm.com",

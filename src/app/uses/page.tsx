@@ -1,16 +1,11 @@
 import { SiteContainer } from "@/components/site-container";
 import { SitePageHeader } from "@/components/site-page-header";
 import { SitePageSection } from "@/components/site-page-section";
+import { SiteSoftwareGrid } from "@/components/site-software-grid";
 import { SiteUsesGrid } from "@/components/site-uses-grid";
 
 export default function UsesPage() {
   const softwareItems = [
-    {
-      link: "https://code.visualstudio.com/",
-      image: "/vscode.png",
-      name: "VS Code",
-      description: "My primary code editor with custom theme and extensions.",
-    },
     {
       link: "https://www.figma.com/",
       image: "/figma.png",
@@ -18,10 +13,40 @@ export default function UsesPage() {
       description: "For all design work and prototyping.",
     },
     {
-      link: "https://www.notion.so/",
-      image: "/notion.png",
-      name: "Notion",
-      description: "For note-taking, documentation and project management.",
+      link: "https://cursor.com/",
+      image: "/cursor.png",
+      name: "Cursor",
+      description: "AI-powered code editor for improved productivity.",
+    },
+    {
+      link: "https://discord.com/",
+      image: "/discord.png",
+      name: "Discord",
+      description: "Communication platform for gaming and communities.",
+    },
+    {
+      link: "https://www.cloudflare.com/",
+      image: "/cloudflare.png",
+      name: "Cloudflare",
+      description: "Domain registration & management.",
+    },
+    {
+      link: "https://previgil.com/",
+      image: "/previgil.png",
+      name: "Previgil",
+      description: "Domain monitoring with real-time updates.",
+    },
+    {
+      link: "https://vercel.com/",
+      image: "/vercel.png",
+      name: "Vercel",
+      description: "For personal website & projects.",
+    },
+    {
+      link: "https://www.hetzner.com/",
+      image: "/hetzner.png",
+      name: "Hetzner",
+      description: "Bare-metal machines and cloud servers.",
     },
     {
       link: "https://www.google.com/chrome/",
@@ -154,7 +179,7 @@ export default function UsesPage() {
 
       <SitePageSection>
         <h2 className="mb-4 text-xl font-semibold">Software</h2>
-        <SiteUsesGrid items={softwareItems} />
+        <SiteSoftwareGrid items={softwareItems} />
       </SitePageSection>
 
       <SitePageSection>

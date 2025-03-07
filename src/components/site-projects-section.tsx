@@ -131,10 +131,7 @@ export function SiteProjectsSection(props: SiteProjectsSectionProps) {
                 </div>
             )}
 
-            <div className="flex items-center justify-between mt-6">
-                <div className="text-sm text-gray-600 dark:text-gray-300">
-                    Showing {filteredProjects.length === 0 ? "0" : `${indexOfFirstProject + 1}-${Math.min(indexOfLastProject, filteredProjects.length)}`} of {filteredProjects.length}
-                </div>
+            <div className="flex items-center justify-start mt-6">
                 <div className="flex gap-2">
                     <Button
                         onClick={goToPreviousPage}

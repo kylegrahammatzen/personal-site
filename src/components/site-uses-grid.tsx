@@ -20,7 +20,7 @@ const UsesItem = (props: UsesItemProps) => {
       <Button intent="ghost" className="h-full w-full p-0">
         <div className="flex w-full flex-col p-4">
           <div className="mb-3 flex justify-center">
-            <div className="relative size-32">
+            <div className="relative size-24">
               <Image
                 src={props.image}
                 alt={props.name}

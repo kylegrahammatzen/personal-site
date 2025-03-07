@@ -26,7 +26,7 @@ export function SiteConnectSection(props: SiteConnectSectionProps) {
         <SitePageSection className="mb-16">
             <h2 className="text-lg font-medium">Connect</h2>
 
-            <div className="space-y-4">
+            <div className="space-y-2">
                 {props.socialLinks.map((link, index) => (
                     <Link
                         key={index}

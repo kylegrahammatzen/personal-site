@@ -40,11 +40,9 @@ export const SiteHeader = () => {
             <Link href="/about">
               <Tab value="about">About</Tab>
             </Link>
-            <Link href="/blog">
-              <Tab value="blog" disabled>
-                Blog
-              </Tab>
-            </Link>
+            <Tab value="blog" disabled>
+              Blog
+            </Tab>
             <Link href="/uses">
               <Tab value="uses">Uses</Tab>
             </Link>
