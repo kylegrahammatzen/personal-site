@@ -2,8 +2,7 @@ import { SiteConnectSection } from "@/components/site-connect-section"
 import { SiteContainer } from "@/components/site-container"
 import { SitePageHeader } from "@/components/site-page-header"
 import { SitePageSection } from "@/components/site-page-section"
-import { SiteProjectCardProps, SiteProjectsSection } from "@/components/site-projects-section"
-import { Separator } from "@/components/ui/separator"
+import { ProjectItemProps, SiteProjectsSection, SiteProjectsSectionProps } from "@/components/site-projects-section"
 import { Github, Linkedin, Twitter } from "lucide-react"
 import Link from "next/link"
 
@@ -14,37 +13,29 @@ export default function Home() {
     "Founder",
   ]
 
-  const projects: SiteProjectCardProps[] = [
+  const projects: ProjectItemProps[] = [
+    {
+      icon: "🎨",
+      title: "UI",
+      description: "Private UI library built on Base UI for personal projects",
+      url: "https://github.com/kylegrahammatzen/ui",
+    },
     {
       icon: "🚀",
       title: "BetterAuth Boilerplate",
-      description: "Next.js starter with Drizzle ORM, organizations and invitation management",
+      description: "Next.js starter with Drizzle ORM and organization management",
       url: "https://github.com/kylegrahammatzen/betterauth-boilerplate",
-      date: "November 2024"
     },
     {
       icon: "🔐",
       title: "Authbase",
-      description: "Email/password authentication system for Next.js 14 with access/refresh tokens",
+      description: "Next.js 14 auth system with access/refresh tokens",
       url: "https://github.com/kylegrahammatzen/authbase",
-      date: "October 2024"
     },
-    {
-      icon: "🎨",
-      title: "UI",
-      description: "Private UI library built on top of Base UI to replace shadcn for personal projects",
-      url: "https://github.com/kylegrahammatzen/ui",
-      date: "February 2025"
-    }
   ];
 
 
   const socialLinks = [
-    {
-      platform: "X",
-      url: "https://x.com/kgmatzen",
-      icon: <Twitter size={18} className="text-gray-600 dark:text-gray-300" />
-    },
     {
       platform: "LinkedIn",
       url: "https://www.linkedin.com/in/kylegrahammatzen/",
