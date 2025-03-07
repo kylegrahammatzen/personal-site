@@ -17,10 +17,10 @@ export type UsesGridProps = {
 const UsesItem = (props: UsesItemProps) => {
   return (
     <Link href={props.link}>
-      <Button intent="ghost" className="h-full w-full p-0">
-        <div className="flex w-full flex-col p-4">
-          <div className="mb-3 flex justify-center">
-            <div className="relative size-24">
+      <Button intent="ghost" className="w-full">
+        <div className="flex w-full flex-col">
+          <div className="mb-2 flex justify-center">
+            <div className="relative size-20">
               <Image
                 src={props.image}
                 alt={props.name}
@@ -46,7 +46,7 @@ const UsesItem = (props: UsesItemProps) => {
 export const SiteUsesGrid = (props: UsesGridProps) => {
   return (
     <Card>
-      <div className="-m-4 grid grid-cols-2">
+      <div className="-m-3 grid grid-cols-2">
         {props.items.map((item, index) => {
           const row = Math.floor(index / 2);
           const col = index % 2;
@@ -55,9 +55,9 @@ export const SiteUsesGrid = (props: UsesGridProps) => {
           const isLastRow = row === rowCount - 1;
 
           const paddingClasses = [
-            col === 0 && "pr-4 pl-4",
-            col === 1 && "pl-4 pr-4",
-            "py-4",
+            col === 0 && "pr-3 pl-3",
+            col === 1 && "pl-3 pr-3",
+            "py-3",
           ]
             .filter(Boolean)
             .join(" ");

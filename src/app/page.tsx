@@ -1,9 +1,11 @@
 import { SiteConnectSection } from "@/components/site-connect-section"
 import { SiteContainer } from "@/components/site-container"
+import { SiteItems } from "@/components/site-items"
 import { SitePageHeader } from "@/components/site-page-header"
 import { SitePageSection } from "@/components/site-page-section"
 import { ProjectItemProps, SiteProjectsSection, SiteProjectsSectionProps } from "@/components/site-projects-section"
-import { Github, Linkedin, Twitter } from "lucide-react"
+import { Avatar, AvatarFallback } from "@/components/ui/avatar"
+import { Github, Linkedin, Mail, Twitter } from "lucide-react"
 import Link from "next/link"
 
 export default function Home() {
@@ -13,40 +15,99 @@ export default function Home() {
     "Founder",
   ]
 
-  const projects: ProjectItemProps[] = [
+  const projectItems = [
     {
-      icon: "🎨",
-      title: "UI",
-      description: "Private UI library built on Base UI for personal projects",
-      url: "https://github.com/kylegrahammatzen/ui",
+      link: "https://github.com/kylegrahammatzen/ui",
+      content: (
+        <div className="flex w-full items-center">
+          <div className="mr-3 flex-shrink-0 size-10 rounded-md bg-[#2a2a2a] flex items-center justify-center grayscale group-hover:grayscale-0 transition-all">
+            <span className="text-white font-medium">U</span>
+          </div>
+          <div className="flex flex-col text-left">
+            <h3 className="font-medium">UI</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400">
+              Private UI library built on Base UI for personal projects
+            </p>
+          </div>
+        </div>
+      )
     },
     {
-      icon: "🚀",
-      title: "BetterAuth Boilerplate",
-      description: "Next.js starter with Drizzle ORM and organization management",
-      url: "https://github.com/kylegrahammatzen/betterauth-boilerplate",
+      link: "https://github.com/kylegrahammatzen/betterauth-boilerplate",
+      content: (
+        <div className="flex w-full items-center">
+          <div className="mr-3 flex-shrink-0 size-10 rounded-md bg-[#2a2a2a] flex items-center justify-center grayscale group-hover:grayscale-0 transition-all">
+            <span className="text-white font-medium">BB</span>
+          </div>
+          <div className="flex flex-col text-left">
+            <h3 className="font-medium">BetterAuth Boilerplate</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400">
+              Next.js starter with Drizzle ORM and organization management
+            </p>
+          </div>
+        </div>
+      )
     },
     {
-      icon: "🔐",
-      title: "Authbase",
-      description: "Next.js 14 auth system with access/refresh tokens",
-      url: "https://github.com/kylegrahammatzen/authbase",
-    },
+      link: "https://github.com/kylegrahammatzen/authbase",
+      content: (
+        <div className="flex w-full items-center">
+          <div className="mr-3 flex-shrink-0 size-10 rounded-md bg-[#2a2a2a] flex items-center justify-center grayscale group-hover:grayscale-0 transition-all">
+            <span className="text-white font-medium">A</span>
+          </div>
+          <div className="flex flex-col text-left">
+            <h3 className="font-medium">Authbase</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400">
+              Next.js 14 auth system with access/refresh tokens
+            </p>
+          </div>
+        </div>
+      )
+    }
   ];
 
-
-  const socialLinks = [
+  const connectItems = [
     {
-      platform: "LinkedIn",
-      url: "https://www.linkedin.com/in/kylegrahammatzen/",
-      icon: <Linkedin size={18} className="text-gray-600 dark:text-gray-300" />
+      link: "https://www.linkedin.com/in/kylegrahammatzen/",
+      content: (
+        <div className="flex w-full items-center">
+          <div className="mr-3 flex-shrink-0 size-10 rounded-md bg-[#2a2a2a] flex items-center justify-center grayscale group-hover:grayscale-0 transition-all">
+            <Linkedin size={18} />
+          </div>
+          <div className="flex flex-col text-left">
+            <h3 className="font-medium">LinkedIn</h3>
+          </div>
+        </div>
+      )
     },
     {
-      platform: "GitHub",
-      url: "https://github.com/kylegrahammatzen",
-      icon: <Github size={18} className="text-gray-600 dark:text-gray-300" />
+      link: "https://github.com/kylegrahammatzen",
+      content: (
+        <div className="flex w-full items-center">
+          <div className="mr-3 flex-shrink-0 size-10 rounded-md bg-[#2a2a2a] flex items-center justify-center grayscale group-hover:grayscale-0 transition-all">
+            <Github size={18} />
+          </div>
+          <div className="flex flex-col text-left">
+            <h3 className="font-medium">GitHub</h3>
+          </div>
+        </div>
+      )
+    },
+    {
+      link: "mailto:hello@example.com",
+      content: (
+        <div className="flex w-full items-center">
+          <div className="mr-3 flex-shrink-0 size-10 rounded-md bg-[#2a2a2a] flex items-center justify-center grayscale group-hover:grayscale-0 transition-all">
+            <Mail size={18} />
+          </div>
+          <div className="flex justify-between items-center w-full">
+            <h3 className="font-medium">Email</h3>
+            <span className="text-sm text-gray-600 dark:text-gray-400">hello@example.com</span>
+          </div>
+        </div>
+      )
     }
-  ]
+  ];
 
   return (
     <SiteContainer>
@@ -70,12 +131,9 @@ export default function Home() {
         </p>
       </SitePageSection>
 
-      <SiteProjectsSection projects={projects} />
+      <SiteItems sectionTitle="Projects" items={projectItems} />
 
-      <SiteConnectSection socialLinks={socialLinks} email={{
-        address: "hello@kylegm.com",
-        label: "Email me"
-      }} />
+      <SiteItems sectionTitle="Connect" items={connectItems} />
     </SiteContainer>
   )
 }

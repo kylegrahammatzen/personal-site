@@ -1,59 +1,166 @@
 import { SiteContainer } from "@/components/site-container";
+import { SiteItems } from "@/components/site-items";
 import { SitePageHeader } from "@/components/site-page-header";
 import { SitePageSection } from "@/components/site-page-section";
 import { SiteSoftwareGrid } from "@/components/site-software-grid";
 import { SiteUsesGrid } from "@/components/site-uses-grid";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 export default function UsesPage() {
   const softwareItems = [
     {
       link: "https://www.figma.com/",
-      image: "/figma.png",
-      name: "Figma",
-      description: "For all design work and prototyping.",
+      content: (
+        <div className="group flex w-full items-center">
+          <Avatar className="mr-3 grayscale group-hover:grayscale-0 transition-all">
+            <AvatarImage src="/figma.png" alt="Figma" />
+            <AvatarFallback>F</AvatarFallback>
+          </Avatar>
+          <div className="flex flex-col text-left">
+            <h3 className="font-medium">Figma</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400">
+              For all design work and prototyping.
+            </p>
+          </div>
+        </div>
+      )
     },
     {
       link: "https://cursor.com/",
-      image: "/cursor.png",
-      name: "Cursor",
-      description: "AI-powered code editor for improved productivity.",
+      content: (
+        <div className="group flex w-full items-center">
+          <Avatar className="mr-3 grayscale group-hover:grayscale-0 transition-all">
+            <AvatarImage src="/cursor.png" alt="Cursor" />
+            <AvatarFallback>C</AvatarFallback>
+          </Avatar>
+          <div className="flex flex-col text-left">
+            <h3 className="font-medium">Cursor</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400">
+              AI-powered code editor for improved productivity.
+            </p>
+          </div>
+        </div>
+      )
     },
     {
       link: "https://discord.com/",
-      image: "/discord.png",
-      name: "Discord",
-      description: "Communication platform for gaming and communities.",
+      content: (
+        <div className="group flex w-full items-center">
+          <Avatar className="mr-3 grayscale group-hover:grayscale-0 transition-all">
+            <AvatarImage src="/discord.png" alt="Discord" />
+            <AvatarFallback>D</AvatarFallback>
+          </Avatar>
+          <div className="flex flex-col text-left">
+            <h3 className="font-medium">Discord</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400">
+              Communication platform for gaming and communities.
+            </p>
+          </div>
+        </div>
+      )
     },
     {
       link: "https://www.cloudflare.com/",
-      image: "/cloudflare.png",
-      name: "Cloudflare",
-      description: "Domain registration & management.",
+      content: (
+        <div className="group flex w-full items-center">
+          <Avatar className="mr-3 grayscale group-hover:grayscale-0 transition-all">
+            <AvatarImage src="/cloudflare.png" alt="Cloudflare" />
+            <AvatarFallback>C</AvatarFallback>
+          </Avatar>
+          <div className="flex flex-col text-left">
+            <h3 className="font-medium">Cloudflare</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400">
+              Domain registration & management.
+            </p>
+          </div>
+        </div>
+      )
     },
     {
       link: "https://previgil.com/",
-      image: "/previgil.png",
-      name: "Previgil",
-      description: "Domain monitoring with real-time updates.",
+      content: (
+        <div className="group flex w-full items-center">
+          <Avatar className="mr-3 grayscale group-hover:grayscale-0 transition-all">
+            <AvatarImage src="/previgil.png" alt="Previgil" />
+            <AvatarFallback>P</AvatarFallback>
+          </Avatar>
+          <div className="flex flex-col text-left">
+            <h3 className="font-medium">Previgil</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400">
+              Domain monitoring with real-time updates.
+            </p>
+          </div>
+        </div>
+      )
     },
     {
       link: "https://vercel.com/",
-      image: "/vercel.png",
-      name: "Vercel",
-      description: "For personal website & projects.",
+      content: (
+        <div className="flex w-full items-center">
+          <Avatar className="mr-3">
+            <AvatarImage src="/vercel.png" alt="Vercel" />
+            <AvatarFallback>V</AvatarFallback>
+          </Avatar>
+          <div className="flex flex-col text-left">
+            <h3 className="font-medium">Vercel</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400">
+              For personal website & projects.
+            </p>
+          </div>
+        </div>
+      )
+    },
+    {
+      link: "https://laravel.com/",
+      content: (
+        <div className="group flex w-full items-center">
+          <Avatar className="mr-3 grayscale group-hover:grayscale-0 transition-all">
+            <AvatarImage src="/laravel.png" alt="Laravel" />
+            <AvatarFallback>L</AvatarFallback>
+          </Avatar>
+          <div className="flex flex-col text-left">
+            <h3 className="font-medium">Laravel</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400">
+              Framework for developing web applications.
+            </p>
+          </div>
+        </div>
+      )
     },
     {
       link: "https://www.hetzner.com/",
-      image: "/hetzner.png",
-      name: "Hetzner",
-      description: "Bare-metal machines and cloud servers.",
+      content: (
+        <div className="group flex w-full items-center">
+          <Avatar className="mr-3 grayscale group-hover:grayscale-0 transition-all">
+            <AvatarImage src="/hetzner.png" alt="Hetzner" />
+            <AvatarFallback>H</AvatarFallback>
+          </Avatar>
+          <div className="flex flex-col text-left">
+            <h3 className="font-medium">Hetzner</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400">
+              Bare-metal machines and cloud servers.
+            </p>
+          </div>
+        </div>
+      )
     },
     {
       link: "https://www.google.com/chrome/",
-      image: "/chrome.png",
-      name: "Chrome",
-      description: "Primary browser with dev tools and extensions.",
-    },
+      content: (
+        <div className="group flex w-full items-center">
+          <Avatar className="mr-3 grayscale group-hover:grayscale-0 transition-all">
+            <AvatarImage src="/chrome.png" alt="Chrome" />
+            <AvatarFallback>C</AvatarFallback>
+          </Avatar>
+          <div className="flex flex-col text-left">
+            <h3 className="font-medium">Chrome</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400">
+              Primary browser with dev tools and extensions.
+            </p>
+          </div>
+        </div>
+      )
+    }
   ];
 
   const desktopItems = [
@@ -177,10 +284,7 @@ export default function UsesPage() {
         description="The tools, equipment, and setup I rely on for my work and daily tasks."
       />
 
-      <SitePageSection>
-        <h2 className="mb-4 text-xl font-semibold">Software</h2>
-        <SiteSoftwareGrid items={softwareItems} />
-      </SitePageSection>
+      <SiteItems sectionTitle="Software" items={softwareItems} />
 
       <SitePageSection>
         <h2 className="mb-4 text-xl font-semibold">Desktop Setup</h2>

@@ -31,15 +31,15 @@ export const SiteSoftwareGrid = (props: SiteSoftwareGridProps) => {
                     return (
                         <div key={index} className={itemClasses}>
                             <Link href={item.link}>
-                                <Button intent="ghost" className="h-full w-full p-0">
-                                    <div className="flex w-full items-start p-4">
+                                <Button intent="ghost" className="w-full">
+                                    <div className="flex w-full items-center">
                                         <div className="mr-3 flex-shrink-0">
                                             <Avatar>
                                                 <AvatarImage src={item.image} alt={item.name} />
                                                 <AvatarFallback>{item.name.charAt(0)}</AvatarFallback>
                                             </Avatar>
                                         </div>
-                                        <div className="flex flex-col text-left">
+                                        <div className="flex flex-col text-left min-w-0 flex-1">
                                             <h3 className="font-medium">{item.name}</h3>
                                             <p className="text-sm text-gray-600 dark:text-gray-400">{item.description}</p>
                                         </div>

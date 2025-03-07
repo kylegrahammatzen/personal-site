@@ -9,21 +9,16 @@ const avatarStyles = tv({
     slots: {
         root: [
             // base
-            'relative flex shrink-0 overflow-hidden rounded-full',
-            // size
-            'size-10'
+            'relative flex shrink-0 overflow-hidden rounded-md',
         ],
         image: [
+            'size-10',
             // base
             'pointer-events-none aspect-square',
-            // size
-            'h-full w-full'
         ],
         fallback: [
             // base
-            'flex items-center justify-center rounded-full',
-            // size
-            'h-full w-full',
+            'flex items-center justify-center rounded-md',
             // background color
             'bg-gray-100 dark:bg-gradient-to-b dark:from-[#2a2a2a] dark:to-[#4e4e4e]',
             // text color
