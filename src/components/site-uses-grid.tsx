@@ -15,13 +15,6 @@ export type UsesGridProps = {
 };
 
 const UsesItem = (props: UsesItemProps) => {
-  // Function to truncate text if it's too long
-  const truncateName = (name: string, maxLength: number = 20) => {
-    return name.length > maxLength
-      ? `${name.substring(0, maxLength)}...`
-      : name;
-  };
-
   return (
     <Link href={props.link}>
       <Button intent="ghost" className="h-full w-full p-0">
@@ -38,7 +31,7 @@ const UsesItem = (props: UsesItemProps) => {
           </div>
           <div className="w-full text-left">
             <h3 className="truncate text-sm font-medium sm:text-base">
-              {truncateName(props.name)}
+              {props.name}
             </h3>
             <p className="mt-1 hidden text-sm text-gray-600 dark:text-gray-400 sm:block">
               {props.description}
