@@ -123,7 +123,7 @@ export default function Home() {
         </p>
 
         <p>
-          As an entrepreneur, I've launched startups that solve real business challenges. Currently working on <Link href="https://previgil.com" className="font-medium text-blue-600 hover:underline dark:text-blue-400">Previgil</Link> for domain management, <Link href="https://bans.io" className="font-medium text-blue-600 hover:underline dark:text-blue-400">Bans.io</Link> for gaming communities, and <Link href="#" className="font-medium text-blue-600 hover:underline dark:text-blue-400">MailCurate</Link> for interactive emails. <Link href="/about" className="font-medium text-blue-600 hover:underline dark:text-blue-400">Learn more about me</Link>.
+          As an entrepreneur, I've launched startups that solve real business challenges. Currently working on <Link href="https://previgil.com" className="text-blue-600 dark:text-blue-400 font-medium hover:underline">Previgil</Link> for domain management, <Link href="https://bans.io" className="font-medium text-blue-600 hover:underline dark:text-blue-400">Bans.io</Link> for gaming communities, and <Link href="#" className="font-medium text-blue-600 hover:underline dark:text-blue-400">MailCurate</Link> for interactive emails. <Link href="/about" className="font-medium text-blue-600 hover:underline dark:text-blue-400">Learn more about me</Link>.
         </p>
       </SitePageSection>
 
