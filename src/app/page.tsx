@@ -1,11 +1,9 @@
-import { SiteConnectSection } from "@/components/site-connect-section"
+
 import { SiteContainer } from "@/components/site-container"
 import { SiteItems } from "@/components/site-items"
 import { SitePageHeader } from "@/components/site-page-header"
 import { SitePageSection } from "@/components/site-page-section"
-import { ProjectItemProps, SiteProjectsSection, SiteProjectsSectionProps } from "@/components/site-projects-section"
-import { Avatar, AvatarFallback } from "@/components/ui/avatar"
-import { Github, Linkedin, Mail, Twitter } from "lucide-react"
+import { Github, Linkedin, Mail } from "lucide-react"
 import Link from "next/link"
 
 export default function Home() {
@@ -94,7 +92,7 @@ export default function Home() {
       )
     },
     {
-      link: "mailto:hello@example.com",
+      link: "mailto:hello@kylegm.com",
       content: (
         <div className="flex w-full items-center">
           <div className="mr-3 flex-shrink-0 size-10 rounded-md bg-[#2a2a2a] flex items-center justify-center grayscale group-hover:grayscale-0 transition-all">
@@ -102,7 +100,7 @@ export default function Home() {
           </div>
           <div className="flex justify-between items-center w-full">
             <h3 className="font-medium">Email</h3>
-            <span className="text-sm text-gray-600 dark:text-gray-400">hello@example.com</span>
+            <span className="text-sm text-gray-600 dark:text-gray-400">hello@kylegm.com</span>
           </div>
         </div>
       )
