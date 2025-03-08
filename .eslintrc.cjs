@@ -1,11 +1,11 @@
-/** @type {import("eslint").Linter.Config} */
 const config = {
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "project": true
   },
   "plugins": [
-    "@typescript-eslint"
+    "@typescript-eslint",
+    "react"
   ],
   "extends": [
     "next/core-web-vitals",
@@ -13,6 +13,9 @@ const config = {
     "plugin:@typescript-eslint/stylistic-type-checked"
   ],
   "rules": {
+    "quotes": "off",
+    "jsx-quotes": "off",
+    "@typescript-eslint/restrict-template-expressions": "off",
     "@typescript-eslint/array-type": "off",
     "@typescript-eslint/consistent-type-definitions": "off",
     "@typescript-eslint/consistent-type-imports": [
@@ -36,7 +39,8 @@ const config = {
           "attributes": false
         }
       }
-    ]
+    ],
+    "react/no-unescaped-entities": "off"
   }
 }
 module.exports = config;

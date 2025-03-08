@@ -1,6 +1,4 @@
-'use client'
-
-import { ComponentPropsWithRef } from 'react'
+import type { ComponentPropsWithRef } from 'react'
 import { tv } from 'tailwind-variants'
 import { cn } from '@/lib/utils'
 import { Avatar as BaseAvatar } from '@base-ui-components/react/avatar'

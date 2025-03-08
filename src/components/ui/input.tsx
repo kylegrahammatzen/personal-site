@@ -1,5 +1,5 @@
 import { Input as BaseInput } from "@base-ui-components/react/input";
-import { ComponentProps } from "react";
+import type { ComponentProps } from "react";
 import { tv } from "tailwind-variants";
 import { cn } from "@/lib/utils";
 

@@ -1,4 +1,4 @@
-import { ReactNode } from "react"
+import type { ReactNode } from "react"
 
 type SitePageSectionProps = {
     children: ReactNode
@@ -6,5 +6,5 @@ type SitePageSectionProps = {
 }
 
 export const SitePageSection = (props: SitePageSectionProps) => {
-    return <div className={`space-y-4 ${props.className || ""}`}>{props.children}</div>
+    return <div className={`space-y-4 ${props.className ?? ""}`}>{props.children}</div>
 }

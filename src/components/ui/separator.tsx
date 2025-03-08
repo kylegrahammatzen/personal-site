@@ -1,4 +1,4 @@
-import { ComponentProps } from "react";
+import type { ComponentProps } from "react";
 import { Separator as BaseSeparator } from "@base-ui-components/react/separator";
 import { tv } from "tailwind-variants";
 
@@ -23,7 +23,7 @@ export const Separator = (props: SeparatorProps) => {
   return (
     <BaseSeparator
       {...props}
-      className={`${separatorVariants({ orientation: props.orientation || "horizontal" })} ${props.className || ""}`}
+      className={`${separatorVariants({ orientation: props.orientation ?? "horizontal" })} ${props.className ?? ""}`}
     />
   );
 };

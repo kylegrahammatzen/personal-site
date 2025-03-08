@@ -6,9 +6,7 @@ import { useState } from "react";
 import { Tab, TabList, Tabs } from "@/components/ui/tab";
 import Image from "next/image";
 
-type RouteMap = {
-  [path: string]: string;
-};
+type RouteMap = Record<string, string>;
 
 const routes: RouteMap = {
   "/": "home",
@@ -21,7 +19,7 @@ export const SiteHeader = () => {
   const pathname = usePathname();
 
   const getActiveTab = (path: string) => {
-    return routes[path] || "home";
+    return routes[path] ?? "home";
   };
 
   const [activeTab, setActiveTab] = useState(getActiveTab(pathname));

@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef } from 'react'
+import type { ComponentPropsWithoutRef } from 'react'
 import { Collapsible as BaseCollapsible } from '@base-ui-components/react/collapsible'
 import { tv, type VariantProps } from 'tailwind-variants'
 import { cn } from '@/lib/utils'

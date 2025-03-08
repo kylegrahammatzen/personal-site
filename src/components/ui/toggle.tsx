@@ -2,7 +2,7 @@
 
 import { Toggle as BaseToggle } from '@base-ui-components/react/toggle'
 import { Button } from '@/components/ui/button'
-import { ComponentPropsWithoutRef, ReactNode } from 'react'
+import type { ComponentPropsWithoutRef, ReactNode } from 'react'
 
 type ToggleProps = {
     onPressedChange?: (pressed: boolean, event: Event) => void
@@ -13,7 +13,7 @@ type ToggleProps = {
 } & Omit<ComponentPropsWithoutRef<typeof Button>, 'className'>
 
 export const Toggle = (props: ToggleProps) => {
-    const { onPressedChange, defaultPressed, pressed, disabled, render, ...buttonProps } = props
+    const { onPressedChange, defaultPressed, pressed, disabled, ...buttonProps } = props
 
     return (
         <BaseToggle
@@ -21,7 +21,7 @@ export const Toggle = (props: ToggleProps) => {
             defaultPressed={defaultPressed}
             pressed={pressed}
             disabled={disabled}
-            render={(toggleProps, state) => (
+            render={(toggleProps) => (
                 <Button {...buttonProps} {...toggleProps} />
             )}
         />

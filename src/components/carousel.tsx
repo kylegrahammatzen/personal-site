@@ -10,7 +10,7 @@ type CarouselProps = {
 
 export const Carousel = (props: CarouselProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const interval = props.interval || 2000;
+  const interval = props.interval ?? 2000;
 
   useEffect(() => {
     const timer = setInterval(() => {

@@ -1,5 +1,5 @@
 import { Carousel } from "@/components/carousel"
-import { ReactNode } from "react"
+import type { ReactNode } from "react"
 
 type SitePageHeaderProps = {
     title: string | string[]

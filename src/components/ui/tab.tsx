@@ -1,5 +1,5 @@
 import { Tabs as BaseTabs } from "@base-ui-components/react/tabs";
-import { ComponentProps } from "react";
+import type { ComponentProps } from "react";
 import { tv, type VariantProps } from "tailwind-variants";
 
 const tabsStyles = tv({
@@ -118,7 +118,7 @@ export const Tab = ({
   return (
     <BaseTabs.Tab
       className={tab({
-        className: `${isDisabled ? "pointer-events-none cursor-not-allowed select-none opacity-50" : ""} ${className || ""}`,
+        className: `${isDisabled ? "pointer-events-none cursor-not-allowed select-none opacity-50" : ""} ${className ?? ""}`,
       })}
       {...props}
       aria-disabled={isDisabled}

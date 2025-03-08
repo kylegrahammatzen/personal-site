@@ -69,7 +69,7 @@ export const Card = (props: CardProps) => {
 
   return (
     <div className={cn(styles.base(), className)} {...rest}>
-      {(title || description) && (
+      {(title ?? description) && (
         <div>
           {title && <h2 className={styles.title()}>{title}</h2>}
           {description && <p className={styles.description()}>{description}</p>}

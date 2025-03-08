@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
-import { ButtonHTMLAttributes } from "react";
-import { tv, VariantProps } from "tailwind-variants";
+import type { ButtonHTMLAttributes } from "react";
+import { tv } from "tailwind-variants";
+import type { VariantProps } from "tailwind-variants";
 
 export const buttonStyles = tv({
   base: [

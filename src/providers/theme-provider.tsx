@@ -25,12 +25,12 @@ export const useTheme = () => {
 }
 
 export const ThemeProvider = (props: ThemeProviderProps) => {
-    const initialTheme = props.defaultTheme || 'system'
+    const initialTheme = props.defaultTheme ?? 'system'
 
     const [theme, setTheme] = useState<Theme>(() => {
         if (typeof window !== 'undefined' && initialTheme !== 'system') {
             const storedTheme = localStorage.getItem('theme') as Theme | null
-            return storedTheme || initialTheme
+            return storedTheme ?? initialTheme
         }
         return initialTheme
     })
