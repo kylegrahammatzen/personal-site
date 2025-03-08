@@ -3,8 +3,8 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { SiteLogo } from "@/components/site-logo";
 import { Tab, TabList, Tabs } from "@/components/ui/tab";
+import Image from "next/image";
 
 type RouteMap = {
   [path: string]: string;
@@ -29,7 +29,15 @@ export const SiteHeader = () => {
   return (
     <header className="mb-16 flex items-center justify-between">
       <Link href="/">
-        <SiteLogo />
+        <div className="relative w-16 h-10">
+          <Image
+            src="/signature.png"
+            alt="Kyle's signature"
+            width={64}
+            height={40}
+            className={`object-contain dark:invert`}
+          />
+        </div>
       </Link>
       <div className="flex items-center gap-1">
         <Tabs value={activeTab} onValueChange={setActiveTab}>

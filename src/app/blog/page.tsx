@@ -2,7 +2,7 @@ import { SiteContainer } from "@/components/site-container";
 import { SitePageHeader } from "@/components/site-page-header";
 import { SitePageSection } from "@/components/site-page-section";
 
-export default function Blogs() {
+export default function BlogPage() {
     return (
         <SiteContainer>
             <SitePageHeader
@@ -11,7 +11,7 @@ export default function Blogs() {
             />
 
             <SitePageSection>
-                <h1>blog list here</h1>
+                You found the secret <code>/blog</code> easter egg 🐣 Come back later to see what I write.
             </SitePageSection>
         </SiteContainer>
     )

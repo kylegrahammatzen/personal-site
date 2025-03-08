@@ -112,7 +112,7 @@ export default function Home() {
       <SitePageHeader
         title={titles}
         description={<p className="font-bold">
-          I'm Kyle, a US-based engineer from West Deptford, New Jersey. Currently pursuing my Computer Science
+          I'm Kyle, a US-based engineer from New Jersey. Currently pursuing my Computer Science
           degree at Rowan University while building software for clients worldwide.
         </p>}
       />
