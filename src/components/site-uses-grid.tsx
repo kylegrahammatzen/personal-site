@@ -33,7 +33,7 @@ const UsesItem = (props: UsesItemProps) => {
             <h3 className="text-sm sm:text-base font-medium truncate">
               {props.name}
             </h3>
-            <p className="hidden sm:block text-sm text-gray-600 dark:text-gray-400 mt-1">
+            <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
               {props.description}
             </p>
           </div>

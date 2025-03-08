@@ -18,7 +18,7 @@ export default function Home() {
       link: "https://github.com/kylegrahammatzen/ui",
       content: (
         <div className="flex w-full items-center">
-          <div className="mr-3 flex-shrink-0 size-10 rounded-md bg-[#2a2a2a] flex items-center justify-center grayscale group-hover:grayscale-0 transition-all">
+          <div className="mr-2 size-10 rounded-md bg-[#6a6a6a] dark:bg-[#2a2a2a] flex items-center justify-center">
             <span className="text-white font-medium">U</span>
           </div>
           <div className="flex flex-col text-left">
@@ -34,7 +34,7 @@ export default function Home() {
       link: "https://github.com/kylegrahammatzen/betterauth-boilerplate",
       content: (
         <div className="flex w-full items-center">
-          <div className="mr-3 flex-shrink-0 size-10 rounded-md bg-[#2a2a2a] flex items-center justify-center grayscale group-hover:grayscale-0 transition-all">
+          <div className="mr-2 size-10 rounded-md bg-[#6a6a6a] dark:bg-[#2a2a2a] flex items-center justify-center">
             <span className="text-white font-medium">BB</span>
           </div>
           <div className="flex flex-col text-left">
@@ -50,7 +50,7 @@ export default function Home() {
       link: "https://github.com/kylegrahammatzen/authbase",
       content: (
         <div className="flex w-full items-center">
-          <div className="mr-3 flex-shrink-0 size-10 rounded-md bg-[#2a2a2a] flex items-center justify-center grayscale group-hover:grayscale-0 transition-all">
+          <div className="mr-2 size-10 rounded-md bg-[#6a6a6a] dark:bg-[#2a2a2a] flex items-center justify-center">
             <span className="text-white font-medium">A</span>
           </div>
           <div className="flex flex-col text-left">
@@ -69,7 +69,7 @@ export default function Home() {
       link: "https://www.linkedin.com/in/kylegrahammatzen/",
       content: (
         <div className="flex w-full items-center">
-          <div className="mr-3 flex-shrink-0 size-10 rounded-md bg-[#2a2a2a] flex items-center justify-center grayscale group-hover:grayscale-0 transition-all">
+          <div className="mr-2 size-10 rounded-md bg-[#6a6a6a] dark:bg-[#2a2a2a] text-white flex items-center justify-center">
             <Linkedin size={18} />
           </div>
           <div className="flex flex-col text-left">
@@ -82,7 +82,7 @@ export default function Home() {
       link: "https://github.com/kylegrahammatzen",
       content: (
         <div className="flex w-full items-center">
-          <div className="mr-3 flex-shrink-0 size-10 rounded-md bg-[#2a2a2a] flex items-center justify-center grayscale group-hover:grayscale-0 transition-all">
+          <div className="mr-2 size-10 rounded-md bg-[#6a6a6a] dark:bg-[#2a2a2a] text-white flex items-center justify-center">
             <Github size={18} />
           </div>
           <div className="flex flex-col text-left">
@@ -95,7 +95,7 @@ export default function Home() {
       link: "mailto:hello@kylegm.com",
       content: (
         <div className="flex w-full items-center">
-          <div className="mr-3 flex-shrink-0 size-10 rounded-md bg-[#2a2a2a] flex items-center justify-center grayscale group-hover:grayscale-0 transition-all">
+          <div className="mr-2 size-10 w-11 rounded-md bg-[#6a6a6a] dark:bg-[#2a2a2a] text-white flex items-center justify-center">
             <Mail size={18} />
           </div>
           <div className="flex justify-between items-center w-full">
@@ -111,12 +111,10 @@ export default function Home() {
     <SiteContainer>
       <SitePageHeader
         title={titles}
-        description={
-          <p className="font-medium">
-            I'm Kyle, a US-based engineer from West Deptford, New Jersey. Currently pursuing my Computer Science
-            degree at Rowan University while building software for clients worldwide.
-          </p>
-        }
+        description={<p className="font-bold">
+          I'm Kyle, a US-based engineer from West Deptford, New Jersey. Currently pursuing my Computer Science
+          degree at Rowan University while building software for clients worldwide.
+        </p>}
       />
 
       <SitePageSection>

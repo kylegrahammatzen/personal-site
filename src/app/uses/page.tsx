@@ -11,7 +11,7 @@ export default function UsesPage() {
       link: "https://www.figma.com/",
       content: (
         <div className="group flex w-full items-center">
-          <Avatar className="mr-3 grayscale group-hover:grayscale-0 transition-all">
+          <Avatar className="mr-2 grayscale group-hover:grayscale-0 transition-all">
             <AvatarImage src="/figma.png" alt="Figma" />
             <AvatarFallback>F</AvatarFallback>
           </Avatar>
@@ -28,7 +28,7 @@ export default function UsesPage() {
       link: "https://cursor.com/",
       content: (
         <div className="group flex w-full items-center">
-          <Avatar className="mr-3 grayscale group-hover:grayscale-0 transition-all">
+          <Avatar className="mr-2 grayscale group-hover:grayscale-0 transition-all">
             <AvatarImage src="/cursor.png" alt="Cursor" />
             <AvatarFallback>C</AvatarFallback>
           </Avatar>
@@ -45,7 +45,7 @@ export default function UsesPage() {
       link: "https://discord.com/",
       content: (
         <div className="group flex w-full items-center">
-          <Avatar className="mr-3 grayscale group-hover:grayscale-0 transition-all">
+          <Avatar className="mr-2 grayscale group-hover:grayscale-0 transition-all">
             <AvatarImage src="/discord.png" alt="Discord" />
             <AvatarFallback>D</AvatarFallback>
           </Avatar>
@@ -62,7 +62,7 @@ export default function UsesPage() {
       link: "https://www.cloudflare.com/",
       content: (
         <div className="group flex w-full items-center">
-          <Avatar className="mr-3 grayscale group-hover:grayscale-0 transition-all">
+          <Avatar className="mr-2 grayscale group-hover:grayscale-0 transition-all">
             <AvatarImage src="/cloudflare.png" alt="Cloudflare" />
             <AvatarFallback>C</AvatarFallback>
           </Avatar>
@@ -79,7 +79,7 @@ export default function UsesPage() {
       link: "https://previgil.com/",
       content: (
         <div className="group flex w-full items-center">
-          <Avatar className="mr-3 grayscale group-hover:grayscale-0 transition-all">
+          <Avatar className="mr-2 grayscale group-hover:grayscale-0 transition-all">
             <AvatarImage src="/previgil.png" alt="Previgil" />
             <AvatarFallback>P</AvatarFallback>
           </Avatar>
@@ -96,7 +96,7 @@ export default function UsesPage() {
       link: "https://vercel.com/",
       content: (
         <div className="flex w-full items-center">
-          <Avatar className="mr-3">
+          <Avatar className="mr-2">
             <AvatarImage src="/vercel.png" alt="Vercel" />
             <AvatarFallback>V</AvatarFallback>
           </Avatar>
@@ -113,7 +113,7 @@ export default function UsesPage() {
       link: "https://laravel.com/",
       content: (
         <div className="group flex w-full items-center">
-          <Avatar className="mr-3 grayscale group-hover:grayscale-0 transition-all">
+          <Avatar className="mr-2 grayscale group-hover:grayscale-0 transition-all">
             <AvatarImage src="/laravel.png" alt="Laravel" />
             <AvatarFallback>L</AvatarFallback>
           </Avatar>
@@ -130,7 +130,7 @@ export default function UsesPage() {
       link: "https://www.hetzner.com/",
       content: (
         <div className="group flex w-full items-center">
-          <Avatar className="mr-3 grayscale group-hover:grayscale-0 transition-all">
+          <Avatar className="mr-2 grayscale group-hover:grayscale-0 transition-all">
             <AvatarImage src="/hetzner.png" alt="Hetzner" />
             <AvatarFallback>H</AvatarFallback>
           </Avatar>
@@ -147,7 +147,7 @@ export default function UsesPage() {
       link: "https://www.google.com/chrome/",
       content: (
         <div className="group flex w-full items-center">
-          <Avatar className="mr-3 grayscale group-hover:grayscale-0 transition-all">
+          <Avatar className="mr-2 grayscale group-hover:grayscale-0 transition-all">
             <AvatarImage src="/chrome.png" alt="Chrome" />
             <AvatarFallback>C</AvatarFallback>
           </Avatar>
@@ -167,12 +167,12 @@ export default function UsesPage() {
       link: "https://www.amd.com/en/products/cpu/amd-ryzen-9-3950x",
       image: "/ryzen-3950x.png",
       name: "AMD Ryzen 9 3950X",
-      description: "16-Core Processor",
+      description: "16C 32T, 3.5GHz (4.7GHz Boost)",
     },
     {
       link: "https://noctua.at/en/nh-d15-chromax-black",
       image: "/noctua-nh-d15.png",
-      name: "Noctua NH-D15",
+      name: "Noctua NH-D15 chromax.black",
       description: "CPU Cooler",
     },
     {
@@ -185,24 +185,24 @@ export default function UsesPage() {
       link: "https://www.corsair.com/us/en/Categories/Products/Memory/vengeance-lpx-black",
       image: "/corsair-vengeance.png",
       name: "Corsair Vengeance LPX",
-      description: "DDR4-3200 CL16 Memory (2 x 16 GB)",
+      description: "32GB (2x16GB) DDR4-3200 CL16",
     },
     {
       link: "https://www.teamgroupinc.com/en/product/mp34",
       image: "/teamgroup-mp34.png",
-      name: "TEAMGROUP MP34 4 TB",
+      name: "TEAMGROUP MP34 4TB",
       description: "M.2 NVME Solid State Drive",
     },
     {
       link: "https://www.samsung.com/us/computing/memory-storage/solid-state-drives",
       image: "/samsung-970.png",
-      name: "Samsung 970 Evo Plus 500 GB",
+      name: "Samsung 970 Evo 500GB",
       description: "M.2 NVME Solid State Drive",
     },
     {
       link: "https://rog.asus.com/graphics-cards",
       image: "/asus-rtx2080ti.png",
-      name: "Asus STRIX RTX 2080 Ti",
+      name: "Asus STRIX RTX 2080Ti",
       description: "11 GB Graphics Card",
     },
     {
@@ -215,13 +215,13 @@ export default function UsesPage() {
       link: "https://www.corsair.com/us/en/Categories/Products/Power-Supply-Units",
       image: "/corsair-sf750.png",
       name: "Corsair SF750",
-      description: "750W 80+ Platinum Modular Power Supply",
+      description: "750W 80+ Gold Modular PSU",
     },
     {
       link: "https://www.tp-link.com/us/home-networking/pcie-adapter/tx401/",
       image: "/tp-link-wifi.png",
       name: "TP-Link WiFi 6 AX3000",
-      description: "Up to 2400 Mbps, Bluetooth 5.2 PCIe Adapter",
+      description: "WiFi 6.0 & Bluetooth 5.2 Adapter",
     },
     {
       link: "https://www.microsoft.com/en-us/windows",
@@ -233,13 +233,25 @@ export default function UsesPage() {
       link: "https://www.lg.com/us/monitors/ultragear-gaming-monitors",
       image: "/lg-ultragear-34.png",
       name: 'LG UltraGear 34GS95QE-B 34"',
-      description: "3440 x 1440 240 Hz Monitor",
+      description: "3440 x 1440 240 Hz OLED Monitor",
     },
     {
       link: "https://www.lg.com/us/monitors",
       image: "/lg-27gl850.png",
       name: 'LG 27GL850-B 27"',
-      description: "2560 x 1440 144 Hz Monitor",
+      description: "2560 x 1440 144 Hz IPS Monitor",
+    },
+    {
+      link: "https://www.amazon.com/gp/product/B07L8MLTGS/",
+      image: "/vivo-ultrawide-arm.png",
+      name: "VIVO Premium Ultrawide Arm",
+      description: "Single Wall Mount for 49\" Screens",
+    },
+    {
+      link: "https://www.amazon.com/dp/B009S750LA/",
+      image: "/vivo-dual-arm.png",
+      name: "VIVO Dual Monitor Mount",
+      description: "Desk Stand for Two 30\" Screens",
     },
     {
       link: "https://www.razer.com/gaming-mice/razer-deathadder-v3",
@@ -273,6 +285,12 @@ export default function UsesPage() {
       image: "/airpods-pro.png",
       name: "AirPods Pro",
       description: "2nd Generation",
+    },
+    {
+      link: "https://www.amazon.com/dp/B08JPCNR1N",
+      image: "/iron-flask.png",
+      name: "IRON FLASK 22oz",
+      description: "Stainless Steel Water Bottle, Black",
     },
   ];
 
