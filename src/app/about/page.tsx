@@ -3,13 +3,14 @@ import { SitePageHeader } from "@/components/site-page-header"
 import { SitePageSection } from "@/components/site-page-section"
 import { Card } from "@/components/ui/card"
 import { Collapsible, CollapsiblePanel, CollapsibleTrigger } from "@/components/ui/collapsible"
+import { cn } from "@/lib/utils"
 import { ChevronRight } from "lucide-react"
 import Link from "next/link"
 import { tv } from "tailwind-variants"
 
 const highlight = tv({
     slots: {
-        blue: "text-blue-400 dark:text-blue-300 font-medium"
+        blue: "text-blue-600 dark:text-blue-400 font-medium"
     }
 })
 
@@ -54,11 +55,11 @@ export default function AboutPage() {
                 </Collapsible>
 
                 <p>
-                    My expertise includes distributed systems, API design, and cloud infrastructure, allowing me to build scalable solutions used by thousands. I run <Link href="https://previgil.com" className="font-medium text-blue-600 hover:underline dark:text-blue-400">Previgil</Link> for domain management, <Link href="https://bans.io" className="font-medium text-blue-600 hover:underline dark:text-blue-400">Bans.io</Link> for gaming communities, and <Link href="#" className="font-medium text-blue-600 hover:underline dark:text-blue-400">MailCurate</Link> for interactive emails.
+                    My expertise includes distributed systems, API design, and cloud infrastructure, allowing me to build scalable solutions used by thousands. I run <Link href="https://previgil.com" className={cn(styles.blue(), 'hover:underline')}>Previgil</Link> for domain management, <Link href="https://bans.io" className={cn(styles.blue(), 'hover:underline')}>Bans.io</Link> for gaming communities, and <Link href="#" className={cn(styles.blue(), 'hover:underline')}>MailCurate</Link> for interactive emails.
                 </p>
 
                 <p>
-                    Find me on Instagram for <Link href="https://instagram.com/kgm.digital" className="font-medium text-blue-600 hover:underline dark:text-blue-400">personal</Link> / <Link href="https://instagram.com/changearc" className="font-medium text-blue-600 hover:underline dark:text-blue-400">fitness</Link> updates.
+                    Find me on Instagram for <Link href="https://instagram.com/kgm.digital" className={cn(styles.blue(), 'hover:underline')}>personal</Link> / <Link href="https://instagram.com/changearc" className={cn(styles.blue(), 'hover:underline')}>fitness</Link> updates.
                 </p>
             </SitePageSection>
         </SiteContainer>
