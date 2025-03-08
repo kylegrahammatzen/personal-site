@@ -12,7 +12,7 @@ const avatarStyles = tv({
             'relative flex shrink-0 overflow-hidden rounded-md',
         ],
         image: [
-            'size-10',
+            'size-8',
             // base
             'pointer-events-none aspect-square',
         ],
