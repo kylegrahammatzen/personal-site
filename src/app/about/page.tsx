@@ -29,7 +29,7 @@ export default function AboutPage() {
                 </p>
 
                 <p>
-                    <span className="font-semibold">I'm pursuing a Bachelor's degree in Computer Science with a minor in Mathematics at Rowan University</span> before focusing on a full-time position in the industry.
+                    <span className="font-semibold">I'm pursuing a Bachelor's degree in Computer Science at Rowan University</span> before focusing on a full-time position in the industry.
                 </p>
 
                 <Collapsible className='w-full'>

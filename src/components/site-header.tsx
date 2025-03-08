@@ -10,15 +10,15 @@ type RouteMap = {
   [path: string]: string;
 };
 
+const routes: RouteMap = {
+  "/": "home",
+  "/about": "about",
+  "/uses": "uses",
+  "/blog": "blog",
+};
+
 export const SiteHeader = () => {
   const pathname = usePathname();
-
-  const routes: RouteMap = {
-    "/": "home",
-    "/about": "about",
-    "/uses": "uses",
-    "/blog": "blog",
-  };
 
   const getActiveTab = (path: string) => {
     return routes[path] || "home";
