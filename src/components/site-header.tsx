@@ -38,6 +38,7 @@ export const SiteHeader = () => {
             alt="Kyle's signature"
             width={64}
             height={40}
+            priority
             className={`object-contain dark:invert`}
           />
         </div>
