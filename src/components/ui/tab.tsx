@@ -82,7 +82,10 @@ export const TabList = (props: TabListProps) => {
   const { list, indicator } = tabsStyles({ intent: props.intent });
 
   return (
-    <BaseTabs.List className={list({ className: props.className })} {...props}>
+    <BaseTabs.List
+      className={list({ className: props.className })}
+      {...props}
+    >
       {props.children}
       <BaseTabs.Indicator
         className={indicator()}
@@ -91,6 +94,7 @@ export const TabList = (props: TabListProps) => {
           transform: "translateX(var(--active-tab-left))",
           transitionProperty: "width, transform",
         }}
+        aria-hidden="true"
       />
     </BaseTabs.List>
   );

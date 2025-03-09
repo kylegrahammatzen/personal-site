@@ -47,16 +47,16 @@ export const SiteHeader = () => {
         <Tabs value={activeTab} onValueChange={setActiveTab}>
           <TabList intent="card">
             <Link href="/">
-              <Tab value="home">Home</Tab>
+              <Tab value="home" aria-current={activeTab === 'home' ? 'page' : undefined}>Home</Tab>
             </Link>
             <Link href="/about">
-              <Tab value="about">About</Tab>
+              <Tab value="about" aria-current={activeTab === 'about' ? 'page' : undefined}>About</Tab>
             </Link>
             <Tab value="blog" disabled>
               Blog
             </Tab>
             <Link href="/uses">
-              <Tab value="uses">Uses</Tab>
+              <Tab value="uses" aria-current={activeTab === 'uses' ? 'page' : undefined}>Uses</Tab>
             </Link>
           </TabList>
           {/* Hidden TabPanels for accessibility compliance */}
