@@ -26,10 +26,12 @@ export const Carousel = (props: CarouselProps) => {
         <div
           key={index}
           className={cn(
-            "absolute w-full transition-all duration-500 ease-in-out",
+            "absolute w-full transform-gpu",
+            "transition duration-500 ease-in-out",
+            "will-change-transform backface-hidden",
             index === currentIndex
-              ? "translate-y-0 opacity-100"
-              : "translate-y-4 opacity-0",
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-8"
           )}
         >
           {item}
