@@ -1,9 +1,9 @@
 import type { ReactNode } from 'react';
-import type { LucideIcon } from 'lucide-react';
+import type { LucideIcon as LucideIconType } from 'lucide-react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
 export type ItemIconType =
-    | { type: 'icon'; icon: LucideIcon }
+    | { type: 'icon'; icon: LucideIconType }
     | { type: 'acronym'; text: string };
 
 export type ItemData = {
