@@ -3,7 +3,8 @@ import { SiteContainer } from "@/components/site-container"
 import { SiteItems } from "@/components/site-items"
 import { SitePageHeader } from "@/components/site-page-header"
 import { SitePageSection } from "@/components/site-page-section"
-import { Github, Linkedin, Mail } from "lucide-react"
+import { createItem } from "@/lib/item-creators"
+import { Github, Linkedin, LucideIcon, Mail } from "lucide-react"
 import Link from "next/link"
 
 export default function Home() {
@@ -14,97 +15,44 @@ export default function Home() {
   ]
 
   const projectItems = [
-    {
-      link: "https://github.com/kylegrahammatzen/ui",
-      content: (
-        <div className="flex w-full items-center">
-          <div className="mr-2 size-8 rounded-md bg-[#6a6a6a] dark:bg-[#2a2a2a] flex items-center justify-center">
-            <span className="text-white font-medium">U</span>
-          </div>
-          <div className="flex flex-col text-left">
-            <h3 className="font-medium">UI</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
-              Private UI library built on Base UI for personal projects
-            </p>
-          </div>
-        </div>
-      )
-    },
-    {
+    createItem({
+      link: "#",
+      name: "UI",
+      icon: { type: 'acronym', text: 'U' },
+      description: "Private UI library for personal projects",
+      isExternal: false
+    }),
+    createItem({
       link: "https://github.com/kylegrahammatzen/betterauth-boilerplate",
-      content: (
-        <div className="flex w-full items-center">
-          <div className="mr-2 size-8 rounded-md bg-[#6a6a6a] dark:bg-[#2a2a2a] flex items-center justify-center">
-            <span className="text-white font-medium">BB</span>
-          </div>
-          <div className="flex flex-col text-left">
-            <h3 className="font-medium">BetterAuth Boilerplate</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
-              Next.js starter with Drizzle ORM and organization management
-            </p>
-          </div>
-        </div>
-      )
-    },
-    {
+      name: "BetterAuth Boilerplate",
+      icon: { type: 'acronym', text: 'BB' },
+      description: "Next.js starter with Drizzle ORM"
+    }),
+    createItem({
       link: "https://github.com/kylegrahammatzen/authbase",
-      content: (
-        <div className="flex w-full items-center">
-          <div className="mr-2 size-8 rounded-md bg-[#6a6a6a] dark:bg-[#2a2a2a] flex items-center justify-center">
-            <span className="text-white font-medium">A</span>
-          </div>
-          <div className="flex flex-col text-left">
-            <h3 className="font-medium">Authbase</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
-              Next.js 14 auth system with access/refresh tokens
-            </p>
-          </div>
-        </div>
-      )
-    }
+      name: "Authbase",
+      icon: { type: 'acronym', text: 'A' },
+      description: "Next.js 14 auth system with access/refresh tokens"
+    })
   ];
 
   const connectItems = [
-    {
+    createItem({
       link: "https://www.linkedin.com/in/kylegrahammatzen/",
-      content: (
-        <div className="flex w-full items-center">
-          <div className="mr-2 size-8 rounded-md bg-[#6a6a6a] dark:bg-[#2a2a2a] text-white flex items-center justify-center">
-            <Linkedin size={18} />
-          </div>
-          <div className="flex flex-col text-left">
-            <h3 className="font-medium">LinkedIn</h3>
-          </div>
-        </div>
-      )
-    },
-    {
+      name: "LinkedIn",
+      icon: { type: 'icon', icon: Linkedin }
+    }),
+    createItem({
       link: "https://github.com/kylegrahammatzen",
-      content: (
-        <div className="flex w-full items-center">
-          <div className="mr-2 size-8 rounded-md bg-[#6a6a6a] dark:bg-[#2a2a2a] text-white flex items-center justify-center">
-            <Github size={18} />
-          </div>
-          <div className="flex flex-col text-left">
-            <h3 className="font-medium">GitHub</h3>
-          </div>
-        </div>
-      )
-    },
-    {
+      name: "GitHub",
+      icon: { type: 'icon', icon: Github }
+    }),
+    createItem({
       link: "mailto:hello@kylegm.com",
-      content: (
-        <div className="flex w-full items-center">
-          <div className="mr-2 size-8 w-9 rounded-md bg-[#6a6a6a] dark:bg-[#2a2a2a] text-white flex items-center justify-center">
-            <Mail size={18} />
-          </div>
-          <div className="flex justify-between items-center w-full">
-            <h3 className="font-medium">Email</h3>
-            <span className="text-sm text-gray-600 dark:text-gray-400">hello@kylegm.com</span>
-          </div>
-        </div>
-      )
-    }
+      name: "Email",
+      icon: { type: 'icon', icon: Mail },
+      email: "hello@kylegm.com"
+    })
   ];
 
   return (

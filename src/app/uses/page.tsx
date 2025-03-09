@@ -3,163 +3,64 @@ import { SiteItems } from "@/components/site-items";
 import { SitePageHeader } from "@/components/site-page-header";
 import { SitePageSection } from "@/components/site-page-section";
 import { SiteUsesGrid } from "@/components/site-uses-grid";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { createSoftwareItem } from "@/lib/item-creators";
 
 export default function UsesPage() {
   const softwareItems = [
-    {
+    createSoftwareItem({
       link: "https://www.figma.com/",
-      content: (
-        <div className="group flex w-full items-center">
-          <Avatar className="mr-2 grayscale group-hover:grayscale-0 transition-all">
-            <AvatarImage src="/figma.webp" alt="Figma" />
-            <AvatarFallback>Figma</AvatarFallback>
-          </Avatar>
-          <div className="flex flex-col text-left">
-            <h3 className="font-medium">Figma</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
-              For all design work and prototyping.
-            </p>
-          </div>
-        </div>
-      )
-    },
-    {
+      name: "Figma",
+      image: "/figma.webp",
+      description: "For all design work and prototyping."
+    }),
+    createSoftwareItem({
       link: "https://cursor.com/",
-      content: (
-        <div className="group flex w-full items-center">
-          <Avatar className="mr-2 grayscale group-hover:grayscale-0 transition-all">
-            <AvatarImage src="/cursor.webp" alt="Cursor" />
-            <AvatarFallback>Cursor</AvatarFallback>
-          </Avatar>
-          <div className="flex flex-col text-left">
-            <h3 className="font-medium">Cursor</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
-              AI-powered code editor for improved productivity.
-            </p>
-          </div>
-        </div>
-      )
-    },
-    {
+      name: "Cursor",
+      image: "/cursor.webp",
+      description: "AI-powered code editor for improved productivity."
+    }),
+    createSoftwareItem({
       link: "https://discord.com/",
-      content: (
-        <div className="group flex w-full items-center">
-          <Avatar className="mr-2 grayscale group-hover:grayscale-0 transition-all">
-            <AvatarImage src="/discord.webp" alt="Discord" />
-            <AvatarFallback>Discord</AvatarFallback>
-          </Avatar>
-          <div className="flex flex-col text-left">
-            <h3 className="font-medium">Discord</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
-              Communication platform for gaming and communities.
-            </p>
-          </div>
-        </div>
-      )
-    },
-    {
+      name: "Discord",
+      image: "/discord.webp",
+      description: "Communication platform for gaming and communities."
+    }),
+    createSoftwareItem({
       link: "https://www.cloudflare.com/",
-      content: (
-        <div className="group flex w-full items-center">
-          <Avatar className="mr-2 grayscale group-hover:grayscale-0 transition-all">
-            <AvatarImage src="/cloudflare.webp" alt="Cloudflare" />
-            <AvatarFallback>Cloudflare</AvatarFallback>
-          </Avatar>
-          <div className="flex flex-col text-left">
-            <h3 className="font-medium">Cloudflare</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
-              Domain registration & management.
-            </p>
-          </div>
-        </div>
-      )
-    },
-    {
+      name: "Cloudflare",
+      image: "/cloudflare.webp",
+      description: "Domain registration & management."
+    }),
+    createSoftwareItem({
       link: "https://previgil.com/",
-      content: (
-        <div className="group flex w-full items-center">
-          <Avatar className="mr-2 grayscale group-hover:grayscale-0 transition-all">
-            <AvatarImage src="/previgil.webp" alt="Previgil" />
-            <AvatarFallback>Previgil</AvatarFallback>
-          </Avatar>
-          <div className="flex flex-col text-left">
-            <h3 className="font-medium">Previgil</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
-              Domain monitoring with real-time updates.
-            </p>
-          </div>
-        </div>
-      )
-    },
-    {
+      name: "Previgil",
+      image: "/previgil.webp",
+      description: "Domain monitoring with real-time updates."
+    }),
+    createSoftwareItem({
       link: "https://vercel.com/",
-      content: (
-        <div className="flex w-full items-center">
-          <Avatar className="mr-2">
-            <AvatarImage src="/vercel.webp" alt="Vercel" />
-            <AvatarFallback>Vercel</AvatarFallback>
-          </Avatar>
-          <div className="flex flex-col text-left">
-            <h3 className="font-medium">Vercel</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
-              For personal website & projects.
-            </p>
-          </div>
-        </div>
-      )
-    },
-    {
+      name: "Vercel",
+      image: "/vercel.webp",
+      description: "For personal website & projects."
+    }),
+    createSoftwareItem({
       link: "https://laravel.com/",
-      content: (
-        <div className="group flex w-full items-center">
-          <Avatar className="mr-2 grayscale group-hover:grayscale-0 transition-all">
-            <AvatarImage src="/laravel.webp" alt="Laravel" />
-            <AvatarFallback>Laravel</AvatarFallback>
-          </Avatar>
-          <div className="flex flex-col text-left">
-            <h3 className="font-medium">Laravel</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
-              Framework for developing web applications.
-            </p>
-          </div>
-        </div>
-      )
-    },
-    {
+      name: "Laravel",
+      image: "/laravel.webp",
+      description: "Framework for developing web applications."
+    }),
+    createSoftwareItem({
       link: "https://www.hetzner.com/",
-      content: (
-        <div className="group flex w-full items-center">
-          <Avatar className="mr-2 grayscale group-hover:grayscale-0 transition-all">
-            <AvatarImage src="/hetzner.webp" alt="Hetzner" />
-            <AvatarFallback>Hetzner</AvatarFallback>
-          </Avatar>
-          <div className="flex flex-col text-left">
-            <h3 className="font-medium">Hetzner</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
-              Bare-metal machines and cloud servers.
-            </p>
-          </div>
-        </div>
-      )
-    },
-    {
+      name: "Hetzner",
+      image: "/hetzner.webp",
+      description: "Bare-metal machines and cloud servers."
+    }),
+    createSoftwareItem({
       link: "https://www.google.com/chrome/",
-      content: (
-        <div className="group flex w-full items-center">
-          <Avatar className="mr-2 grayscale group-hover:grayscale-0 transition-all">
-            <AvatarImage src="/chrome.webp" alt="Chrome" />
-            <AvatarFallback>Chrome</AvatarFallback>
-          </Avatar>
-          <div className="flex flex-col text-left">
-            <h3 className="font-medium">Chrome</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
-              Primary browser with dev tools and extensions.
-            </p>
-          </div>
-        </div>
-      )
-    }
+      name: "Chrome",
+      image: "/chrome.webp",
+      description: "Primary browser with dev tools and extensions."
+    })
   ];
 
   const desktopItems = [

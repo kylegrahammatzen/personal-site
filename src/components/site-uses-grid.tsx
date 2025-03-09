@@ -14,35 +14,31 @@ export type UsesGridProps = {
   items: UsesItemProps[];
 };
 
-const UsesItem = (props: UsesItemProps) => {
-  return (
-    <Link href={props.link}>
-      <Button intent="ghost" className="group w-full">
-        <div className="flex flex-col w-full">
-          <div className="flex justify-center mb-2">
-            <div className="relative size-20">
-              <Image
-                src={props.image}
-                alt={props.name}
-                fill
-                priority
-                className="opacity-80 grayscale object-contain transition-all group-hover:grayscale-0"
-              />
-            </div>
-          </div>
-          <div className="text-left w-full">
-            <h3 className="text-sm sm:text-base font-medium truncate">
-              {props.name}
-            </h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
-              {props.description}
-            </p>
-          </div>
+const UsesItem = (props: UsesItemProps) => (
+  <Link href={props.link}>
+    <Button intent="ghost" className="group w-full">
+      <div className="w-full">
+        <div className="relative size-20 mx-auto mb-2">
+          <Image
+            src={props.image}
+            alt={props.name}
+            fill
+            priority
+            className="opacity-80 grayscale object-contain transform-gpu transition-filter duration-300 ease-in-out group-hover:grayscale-0"
+          />
         </div>
-      </Button>
-    </Link>
-  );
-};
+        <div className="text-left">
+          <h3 className="text-sm sm:text-base font-medium truncate">
+            {props.name}
+          </h3>
+          <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+            {props.description}
+          </p>
+        </div>
+      </div>
+    </Button>
+  </Link>
+);
 
 export const SiteUsesGrid = (props: UsesGridProps) => {
   return (
