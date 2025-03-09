@@ -26,7 +26,7 @@ export const SiteHeader = () => {
 
   return (
     <header className="mb-16 flex items-center justify-between">
-      <Link href="/">
+      <Link href="/" onClick={() => setActiveTab("home")}>
         <div className="relative w-16 h-10">
           <Image
             src="/signature.png"
