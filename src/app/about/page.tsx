@@ -26,11 +26,11 @@ export default function AboutPage() {
 
             <SitePageSection>
                 <p>
-                    I&apos;m Kyle, a 22 year old US-based software engineer from New Jersey. My coding journey began in <span className={styles.blue()}>5th grade</span> when I was just <span className={styles.blue()}>10 years old</span>, starting with <span className={styles.blue()}>Minecraft</span> development which ignited my passion for software engineering.
+                    I&apos;m Kyle, a 22 year old US-based software engineer from New Jersey. My coding journey began in <span>5th grade</span> when I was just <span>10 years old</span>, starting with <span>Minecraft</span> development which ignited my passion for software engineering.
                 </p>
 
                 <p>
-                    <span className="font-semibold">I&apos;m pursuing a Bachelor&apos;s degree in Computer Science at Rowan University</span> before focusing on a full-time position in the industry.
+                    <span>I&apos;m pursuing a Bachelor&apos;s degree in Computer Science at Rowan University</span> before focusing on a full-time position in the industry.
                 </p>
 
                 <Collapsible className='w-full'>
@@ -43,11 +43,11 @@ export default function AboutPage() {
                     <CollapsiblePanel>
                         <Card intent='ghost'>
                             <p>
-                                From <span className={styles.blue()}>age 10</span> until high school, I played soccer for my town&apos;s team <span className={styles.blue()}>&quot;Surge&quot;</span>, experiencing various positions from forward to midfielder to defender.
+                                From <span>age 10</span> until high school, I played soccer for my town&apos;s team <span>&quot;Surge&quot;</span>, experiencing various positions from forward to midfielder to defender.
                             </p>
 
                             <p>
-                                At age 10, I got my first laptop and began exploring what it could do. By age 12, I was freelancing with <span className={styles.blue()}>Minecraft</span> plugins, mods, and server infrastructure. I developed <span className={styles.blue()}>&quot;Premium&quot;</span> plugins for a short period of time in 2021, while also working on custom projects under NDAs.
+                                At age 10, I got my first laptop and began exploring what it could do. By age 12, I was freelancing with <span>Minecraft</span> plugins, mods, and server infrastructure. I developed <span>&quot;Premium&quot;</span> plugins for a short period of time in 2021, while also working on custom projects under NDAs.
                             </p>
 
                         </Card>
