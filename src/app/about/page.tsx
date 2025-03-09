@@ -43,11 +43,11 @@ export default function AboutPage() {
                     <CollapsiblePanel>
                         <Card intent='ghost'>
                             <p>
-                                From <span className={styles.blue()}>age 10</span> until high school, I played soccer for my town&apos;s team <span className={styles.blue()}>`&quot;Surge`&quot;</span>, experiencing various positions from forward to midfielder to defender.
+                                From <span className={styles.blue()}>age 10</span> until high school, I played soccer for my town&apos;s team <span className={styles.blue()}>&quot;Surge&quot;</span>, experiencing various positions from forward to midfielder to defender.
                             </p>
 
                             <p>
-                                At age 10, I got my first laptop and began exploring what it could do. By age 12, I was freelancing with <span className={styles.blue()}>Minecraft</span> plugins, mods, and server infrastructure. I developed <span className={styles.blue()}>`&quot;Premium`&quot;</span> plugins for a short period of time in 2021, while also working on custom projects under NDAs.
+                                At age 10, I got my first laptop and began exploring what it could do. By age 12, I was freelancing with <span className={styles.blue()}>Minecraft</span> plugins, mods, and server infrastructure. I developed <span className={styles.blue()}>&quot;Premium&quot;</span> plugins for a short period of time in 2021, while also working on custom projects under NDAs.
                             </p>
 
                         </Card>
