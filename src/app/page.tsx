@@ -1,14 +1,21 @@
-
+import { tv } from 'tailwind-variants'
+import Link from "next/link"
 import { SiteContainer } from "@/components/site-container"
 import { SiteItems } from "@/components/site-items"
 import { SitePageHeader } from "@/components/site-page-header"
 import { SitePageSection } from "@/components/site-page-section"
 import { createItem } from "@/lib/item-creators"
-import { Github, Linkedin, LucideIcon, Mail } from "lucide-react"
-import Link from "next/link"
+import { Github, Linkedin, Mail } from "lucide-react"
+
+const link = tv({
+  slots: {
+    base: "font-medium hover:underline",
+    primary: "text-blue-600 dark:text-blue-400",
+  }
+})
 
 export default function Home() {
-  const titles: string[] = [
+  const titles = [
     "Software Engineer",
     "Entrepreneur",
     "Founder",
@@ -66,19 +73,33 @@ export default function Home() {
     <SiteContainer>
       <SitePageHeader
         title={titles}
-        description={<p className="font-bold">
-          I'm Kyle, a US-based engineer from New Jersey. Currently pursuing my Computer Science
-          degree at Rowan University while building software for clients worldwide.
-        </p>}
+        description={
+          <p className="font-bold">
+            I'm Kyle, a US-based engineer from New Jersey. Currently pursuing my Computer Science
+            degree at Rowan University while building software for clients worldwide.
+          </p>
+        }
       />
 
       <SitePageSection>
-        <p>
+        <p className="mb-4 text-base leading-relaxed">
           I build scalable software systems that power applications used by thousands. My expertise includes distributed systems, API design, and cloud infrastructure.
         </p>
 
-        <p>
-          As an entrepreneur, I've launched startups that solve real business challenges. Currently working on <Link href="https://previgil.com" className="text-blue-600 dark:text-blue-400 font-medium hover:underline">Previgil</Link> for domain management, <Link href="https://bans.io" className="font-medium text-blue-600 hover:underline dark:text-blue-400">Bans.io</Link> for gaming communities, and <Link href="#" className="font-medium text-blue-600 hover:underline dark:text-blue-400">MailCurate</Link> for interactive emails. <Link href="/about" className="font-medium text-blue-600 hover:underline dark:text-blue-400">Learn more about me</Link>.
+        <p className="text-base leading-relaxed">
+          As an entrepreneur, I've launched startups that solve real business challenges. Currently working on{' '}
+          <Link href="https://previgil.com" className={link().base()} rel="preconnect">
+            <span className={link().primary()}>Previgil</span>
+          </Link> for domain management,{' '}
+          <Link href="https://bans.io" className={link().base()} rel="preconnect">
+            <span className={link().primary()}>Bans.io</span>
+          </Link> for gaming communities, and{' '}
+          <Link href="#" className={link().base()}>
+            <span className={link().primary()}>MailCurate</span>
+          </Link> for interactive emails.{' '}
+          <Link href="/about" className={link().base()}>
+            <span className={link().primary()}>Learn more about me</span>
+          </Link>.
         </p>
       </SitePageSection>
 
