@@ -72,7 +72,7 @@ export const createSoftwareItem = (item: SoftwareItemData) => {
             <div className="group flex w-full items-center">
                 <Avatar className="mr-2 grayscale transform-gpu transition-filter duration-300 ease-in-out group-hover:grayscale-0">
                     <AvatarImage src={item.image} alt={item.name} />
-                    <AvatarFallback>{item.fallback || item.name}</AvatarFallback>
+                    <AvatarFallback>{item.fallback ?? item.name}</AvatarFallback>
                 </Avatar>
                 <div className="flex flex-col text-left">
                     <h3 className="font-medium">{item.name}</h3>
