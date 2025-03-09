@@ -2,7 +2,7 @@ import { ThemeProvider } from "@/providers/theme-provider"
 import { SiteHeader } from "@/components/site-header"
 import "@/styles/globals.css"
 import localFont from 'next/font/local'
-import { Metadata } from "next"
+import type { Metadata } from "next"
 
 const metroSans = localFont({
   src: [
