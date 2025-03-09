@@ -1,5 +1,9 @@
-import { Carousel } from "@/components/carousel"
+import dynamic from 'next/dynamic'
 import type { ReactNode } from "react"
+
+const Carousel = dynamic(() => import("@/components/carousel").then(mod => mod.Carousel), {
+    loading: () => <span className="text-3xl">Loading...</span>
+})
 
 type SitePageHeaderProps = {
     title: string | string[]
@@ -9,10 +13,19 @@ type SitePageHeaderProps = {
 export const SitePageHeader = (props: SitePageHeaderProps) => {
     const isCarousel = Array.isArray(props.title)
 
+    if (!isCarousel) {
+        return (
+            <div className="space-y-2">
+                <h1 className="text-3xl">{props.title}</h1>
+                {props.description && <div>{props.description}</div>}
+            </div>
+        )
+    }
+
     return (
         <div className="space-y-2">
             <h1 className="text-3xl">
-                {isCarousel ? <Carousel items={props.title as string[]} /> : props.title}
+                <Carousel items={props.title as string[]} />
             </h1>
             {props.description && <div>{props.description}</div>}
         </div>

@@ -68,9 +68,9 @@ type TabsRootProps = ComponentProps<typeof BaseTabs.Root> & {
   className?: string;
 };
 
-export const Tabs = ({ className, ...props }: TabsRootProps) => {
+export const Tabs = (props: TabsRootProps) => {
   const { root } = tabsStyles();
-  return <BaseTabs.Root className={root({ className })} {...props} />;
+  return <BaseTabs.Root className={root({ className: props.className })} {...props} />;
 };
 
 type TabListProps = ComponentProps<typeof BaseTabs.List> &
@@ -78,17 +78,12 @@ type TabListProps = ComponentProps<typeof BaseTabs.List> &
     className?: string;
   };
 
-export const TabList = ({
-  className,
-  intent = "default",
-  children,
-  ...props
-}: TabListProps) => {
-  const { list, indicator } = tabsStyles({ intent });
+export const TabList = (props: TabListProps) => {
+  const { list, indicator } = tabsStyles({ intent: props.intent });
 
   return (
-    <BaseTabs.List className={list({ className })} {...props}>
-      {children}
+    <BaseTabs.List className={list({ className: props.className })} {...props}>
+      {props.children}
       <BaseTabs.Indicator
         className={indicator()}
         style={{
@@ -106,19 +101,14 @@ type TabProps = ComponentProps<typeof BaseTabs.Tab> &
     className?: string;
   };
 
-export const Tab = ({
-  className,
-  intent = "default",
-  disabled,
-  ...props
-}: TabProps) => {
-  const isDisabled = disabled === true;
-  const { tab } = tabsStyles({ intent });
+export const Tab = (props: TabProps) => {
+  const isDisabled = props.disabled === true;
+  const { tab } = tabsStyles({ intent: props.intent });
 
   return (
     <BaseTabs.Tab
       className={tab({
-        className: `${isDisabled ? "pointer-events-none cursor-not-allowed select-none opacity-50" : ""} ${className ?? ""}`,
+        className: `${isDisabled ? "pointer-events-none cursor-not-allowed select-none opacity-50" : ""} ${props.className ?? ""}`,
       })}
       {...props}
       aria-disabled={isDisabled}
@@ -131,7 +121,7 @@ type TabPanelProps = ComponentProps<typeof BaseTabs.Panel> & {
   className?: string;
 };
 
-export const TabPanel = ({ className, ...props }: TabPanelProps) => {
+export const TabPanel = (props: TabPanelProps) => {
   const { panel } = tabsStyles();
-  return <BaseTabs.Panel className={panel({ className })} {...props} />;
+  return <BaseTabs.Panel className={panel({ className: props.className })} {...props} />;
 };

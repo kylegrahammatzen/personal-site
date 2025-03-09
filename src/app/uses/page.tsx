@@ -12,8 +12,8 @@ export default function UsesPage() {
       content: (
         <div className="group flex w-full items-center">
           <Avatar className="mr-2 grayscale group-hover:grayscale-0 transition-all">
-            <AvatarImage src="/figma.png" alt="Figma" />
-            <AvatarFallback>F</AvatarFallback>
+            <AvatarImage src="/figma.webp" alt="Figma" />
+            <AvatarFallback>Figma</AvatarFallback>
           </Avatar>
           <div className="flex flex-col text-left">
             <h3 className="font-medium">Figma</h3>
@@ -29,8 +29,8 @@ export default function UsesPage() {
       content: (
         <div className="group flex w-full items-center">
           <Avatar className="mr-2 grayscale group-hover:grayscale-0 transition-all">
-            <AvatarImage src="/cursor.png" alt="Cursor" />
-            <AvatarFallback>C</AvatarFallback>
+            <AvatarImage src="/cursor.webp" alt="Cursor" />
+            <AvatarFallback>Cursor</AvatarFallback>
           </Avatar>
           <div className="flex flex-col text-left">
             <h3 className="font-medium">Cursor</h3>
@@ -46,8 +46,8 @@ export default function UsesPage() {
       content: (
         <div className="group flex w-full items-center">
           <Avatar className="mr-2 grayscale group-hover:grayscale-0 transition-all">
-            <AvatarImage src="/discord.png" alt="Discord" />
-            <AvatarFallback>D</AvatarFallback>
+            <AvatarImage src="/discord.webp" alt="Discord" />
+            <AvatarFallback>Discord</AvatarFallback>
           </Avatar>
           <div className="flex flex-col text-left">
             <h3 className="font-medium">Discord</h3>
@@ -63,8 +63,8 @@ export default function UsesPage() {
       content: (
         <div className="group flex w-full items-center">
           <Avatar className="mr-2 grayscale group-hover:grayscale-0 transition-all">
-            <AvatarImage src="/cloudflare.png" alt="Cloudflare" />
-            <AvatarFallback>C</AvatarFallback>
+            <AvatarImage src="/cloudflare.webp" alt="Cloudflare" />
+            <AvatarFallback>Cloudflare</AvatarFallback>
           </Avatar>
           <div className="flex flex-col text-left">
             <h3 className="font-medium">Cloudflare</h3>
@@ -80,8 +80,8 @@ export default function UsesPage() {
       content: (
         <div className="group flex w-full items-center">
           <Avatar className="mr-2 grayscale group-hover:grayscale-0 transition-all">
-            <AvatarImage src="/previgil.png" alt="Previgil" />
-            <AvatarFallback>P</AvatarFallback>
+            <AvatarImage src="/previgil.webp" alt="Previgil" />
+            <AvatarFallback>Previgil</AvatarFallback>
           </Avatar>
           <div className="flex flex-col text-left">
             <h3 className="font-medium">Previgil</h3>
@@ -97,8 +97,8 @@ export default function UsesPage() {
       content: (
         <div className="flex w-full items-center">
           <Avatar className="mr-2">
-            <AvatarImage src="/vercel.png" alt="Vercel" />
-            <AvatarFallback>V</AvatarFallback>
+            <AvatarImage src="/vercel.webp" alt="Vercel" />
+            <AvatarFallback>Vercel</AvatarFallback>
           </Avatar>
           <div className="flex flex-col text-left">
             <h3 className="font-medium">Vercel</h3>
@@ -114,8 +114,8 @@ export default function UsesPage() {
       content: (
         <div className="group flex w-full items-center">
           <Avatar className="mr-2 grayscale group-hover:grayscale-0 transition-all">
-            <AvatarImage src="/laravel.png" alt="Laravel" />
-            <AvatarFallback>L</AvatarFallback>
+            <AvatarImage src="/laravel.webp" alt="Laravel" />
+            <AvatarFallback>Laravel</AvatarFallback>
           </Avatar>
           <div className="flex flex-col text-left">
             <h3 className="font-medium">Laravel</h3>
@@ -131,8 +131,8 @@ export default function UsesPage() {
       content: (
         <div className="group flex w-full items-center">
           <Avatar className="mr-2 grayscale group-hover:grayscale-0 transition-all">
-            <AvatarImage src="/hetzner.png" alt="Hetzner" />
-            <AvatarFallback>H</AvatarFallback>
+            <AvatarImage src="/hetzner.webp" alt="Hetzner" />
+            <AvatarFallback>Hetzner</AvatarFallback>
           </Avatar>
           <div className="flex flex-col text-left">
             <h3 className="font-medium">Hetzner</h3>
@@ -148,8 +148,8 @@ export default function UsesPage() {
       content: (
         <div className="group flex w-full items-center">
           <Avatar className="mr-2 grayscale group-hover:grayscale-0 transition-all">
-            <AvatarImage src="/chrome.png" alt="Chrome" />
-            <AvatarFallback>C</AvatarFallback>
+            <AvatarImage src="/chrome.webp" alt="Chrome" />
+            <AvatarFallback>Chrome</AvatarFallback>
           </Avatar>
           <div className="flex flex-col text-left">
             <h3 className="font-medium">Chrome</h3>
@@ -165,109 +165,109 @@ export default function UsesPage() {
   const desktopItems = [
     {
       link: "https://amzn.to/3DqagOO",
-      image: "/ryzen-3950x.png",
+      image: "/ryzen-3950x.webp",
       name: "AMD Ryzen 9 3950X",
       description: "16C 32T, 3.5GHz (4.7GHz Boost)",
     },
     {
       link: "https://amzn.to/4kykyNy",
-      image: "/noctua-nh-d15.png",
+      image: "/noctua-nh-d15.webp",
       name: "Noctua NH-D15 chromax.black",
       description: "CPU Cooler",
     },
     {
       link: "https://amzn.to/4kykNIs",
-      image: "/msi-x570.png",
+      image: "/msi-x570.webp",
       name: "MSI MPG X570",
       description: "ATX AM4 Motherboard",
     },
     {
       link: "https://amzn.to/4ipnbj6",
-      image: "/corsair-vengeance.png",
+      image: "/corsair-vengeance.webp",
       name: "Corsair Vengeance LPX",
       description: "32GB (2x16GB) DDR4-3200 CL16",
     },
     {
       link: "https://amzn.to/3For3lP",
-      image: "/teamgroup-mp34.png",
+      image: "/teamgroup-mp34.webp",
       name: "TEAMGROUP MP34 4TB",
       description: "M.2 NVME Solid State Drive",
     },
     {
       link: "https://amzn.to/3FpUDaD",
-      image: "/samsung-970.png",
+      image: "/samsung-970.webp",
       name: "Samsung 970 Evo 500GB",
       description: "M.2 NVME Solid State Drive",
     },
     {
       link: "https://amzn.to/4hgozTW",
-      image: "/asus-rtx2080ti.png",
+      image: "/asus-rtx2080ti.webp",
       name: "Asus STRIX RTX 2080Ti",
       description: "11 GB Graphics Card",
     },
     {
       link: "https://amzn.to/4ipnuug",
-      image: "/nzxt-h710.png",
+      image: "/nzxt-h710.webp",
       name: "NZXT H710",
       description: "ATX Mid Tower Case",
     },
     {
       link: "https://amzn.to/3DrIu4E",
-      image: "/corsair-sf750.png",
+      image: "/corsair-sf750.webp",
       name: "Corsair SF750",
       description: "750W 80+ Gold Modular PSU",
     },
     {
       link: "https://amzn.to/4hgrpZ1",
-      image: "/tp-link-wifi.png",
+      image: "/tp-link-wifi.webp",
       name: "TP-Link WiFi 6 AX3000",
       description: "WiFi 6.0 & Bluetooth 5.2 Adapter",
     },
     {
       link: "https://amzn.to/4i8Kiyo",
-      image: "/windows10.png",
+      image: "/windows10.webp",
       name: "Windows 11 Home",
       description: "Operating System",
     },
     {
       link: "https://amzn.to/3DzRncb",
-      image: "/lg-ultragear-34.png",
+      image: "/lg-ultragear-34.webp",
       name: 'LG UltraGear 34GS95QE-B 34"',
       description: "3440 x 1440 240 Hz OLED Monitor",
     },
     {
       link: "https://amzn.to/41wX6Yf",
-      image: "/lg-27gl850.png",
+      image: "/lg-27gl850.webp",
       name: 'LG 27GL850-B 27"',
       description: "2560 x 1440 144 Hz IPS Monitor",
     },
     {
       link: "https://www.amazon.com/gp/product/B07L8MLTGS/",
-      image: "/vivo-ultrawide-arm.png",
+      image: "/vivo-ultrawide-arm.webp",
       name: "VIVO Premium Ultrawide Arm",
       description: "Single Wall Mount for 49\" Screens",
     },
     {
       link: "https://www.amazon.com/dp/B009S750LA/",
-      image: "/vivo-dual-arm.png",
+      image: "/vivo-dual-arm.webp",
       name: "VIVO Dual Monitor Mount",
       description: "Desk Stand for Two 30\" Screens",
     },
     {
       link: "https://amzn.to/3FgHmRR",
-      image: "/razer-deathadder.png",
+      image: "/razer-deathadder.webp",
       name: "Razer DeathAdder V3",
       description: "Wired Optical Mouse",
     },
     {
       link: "https://amzn.to/4ipooqE",
-      image: "/logitech-pro-x.png",
+      image: "/logitech-pro-x.webp",
       name: "Logitech PRO X 2 LIGHTSPEED",
       description: "Gaming Headset",
     },
     {
       link: "https://amzn.to/3XyF0Uw",
-      image: "/razer-huntsman.png",
+      image: "/razer-huntsman.webp",
       name: "Razer Huntsman TE",
       description: "Optical Gaming Keyboard",
     },
@@ -276,19 +276,19 @@ export default function UsesPage() {
   const gearItems = [
     {
       link: "https://www.apple.com/by/iphone-12/",
-      image: "/iphone-12.png",
+      image: "/iphone-12.webp",
       name: "Apple iPhone 12",
       description: "64GB, Black",
     },
     {
       link: "https://www.apple.com/by/airpods-pro/",
-      image: "/airpods-pro.png",
+      image: "/airpods-pro.webp",
       name: "AirPods Pro",
       description: "2nd Generation",
     },
     {
       link: "https://amzn.to/43tv6HA",
-      image: "/iron-flask.png",
+      image: "/iron-flask.webp",
       name: "IRON FLASK 22oz",
       description: "Stainless Steel Water Bottle, Black",
     },

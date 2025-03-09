@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
-import { Tab, TabList, Tabs } from "@/components/ui/tab";
+import { useState, useEffect } from "react";
+import { Tab, TabList, TabPanel, Tabs } from "@/components/ui/tab";
 import Image from "next/image";
 
 type RouteMap = Record<string, string>;
@@ -24,12 +24,17 @@ export const SiteHeader = () => {
 
   const [activeTab, setActiveTab] = useState(getActiveTab(pathname));
 
+  // Update active tab when pathname changes
+  useEffect(() => {
+    setActiveTab(getActiveTab(pathname));
+  }, [pathname]);
+
   return (
     <header className="mb-16 flex items-center justify-between">
       <Link href="/" onClick={() => setActiveTab("home")}>
         <div className="relative w-16 h-10">
           <Image
-            src="/signature.png"
+            src="/signature.webp"
             alt="Kyle's signature"
             width={64}
             height={40}
@@ -53,6 +58,13 @@ export const SiteHeader = () => {
               <Tab value="uses">Uses</Tab>
             </Link>
           </TabList>
+          {/* Hidden TabPanels for accessibility compliance */}
+          <div className="sr-only">
+            <TabPanel value="home">Home page content</TabPanel>
+            <TabPanel value="about">About page content</TabPanel>
+            <TabPanel value="blog">Blog content</TabPanel>
+            <TabPanel value="uses">Uses page content</TabPanel>
+          </div>
         </Tabs>
       </div>
     </header>

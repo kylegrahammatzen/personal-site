@@ -25,6 +25,7 @@ const UsesItem = (props: UsesItemProps) => {
                 src={props.image}
                 alt={props.name}
                 fill
+                priority
                 className="opacity-80 grayscale object-contain transition-all group-hover:grayscale-0"
               />
             </div>
