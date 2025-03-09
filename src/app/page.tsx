@@ -17,6 +17,13 @@ export default function Home() {
   const projectItems = [
     createItem({
       link: "#",
+      name: "BetterClerk",
+      icon: { type: 'acronym', text: 'BC' },
+      description: "Next.js 15 auth with SingleStore, multi-tenancy, MFA & sessions",
+      isExternal: false
+    }),
+    createItem({
+      link: "#",
       name: "UI",
       icon: { type: 'acronym', text: 'U' },
       description: "Private UI library for personal projects",
