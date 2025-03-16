@@ -36,10 +36,9 @@ export const SiteHeader = () => {
           <Image
             src="/signature.webp"
             alt="Kyle's signature"
-            width={64}
-            height={40}
+            fill
             priority
-            className={`object-contain dark:invert`}
+            className="object-contain dark:invert"
           />
         </div>
       </Link>

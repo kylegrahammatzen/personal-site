@@ -50,6 +50,15 @@ type RootLayoutProps = {
 export default function RootLayout(props: RootLayoutProps) {
   return (
     <html lang='en' className={`${metroSans.variable}`}>
+      {/* <head>
+        <script
+          defer
+          type="text/javascript"
+          src="http://localhost:3000/api/v1/script"
+          data-site="01959d31-0be8-768c-9a20-7f4d0dd65d44"
+          data-endpoint="http://localhost:3000/api/v1/event">
+        </script>
+      </head> */}
       <body>
         <div className='Root'>
           <ThemeProvider defaultTheme="system">
