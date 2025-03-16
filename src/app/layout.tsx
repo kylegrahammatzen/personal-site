@@ -21,7 +21,6 @@ const metroSans = localFont({
   display: 'swap'
 })
 
-// metadata
 export const metadata: Metadata = {
   title: 'Kyle Matzen | Software Engineer & Entrepreneur',
   description: 'Software engineer building scalable systems and launching startups like Previgil, Bans.io, and MailCurate. Computer Science student at Rowan University working with clients worldwide.',
@@ -60,14 +59,12 @@ export default function RootLayout(props: RootLayoutProps) {
         </script>
       </head> */}
       <body>
-        <div className='Root'>
-          <ThemeProvider defaultTheme="system">
-            <div className="container mx-auto px-8 py-16 max-w-2xl">
-              <SiteHeader />
-              <main>{props.children}</main>
-            </div>
-          </ThemeProvider>
-        </div>
+        <ThemeProvider defaultTheme="system">
+          <div className='mx-auto px-8 py-16 max-w-2xl'>
+            <SiteHeader />
+            <main>{props.children}</main>
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

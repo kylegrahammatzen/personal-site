@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { Tab, TabList, TabPanel, Tabs } from "@/components/ui/tab";
 import Image from "next/image";
+import { useMount } from "@/hooks/use-mount";
 
 type RouteMap = Record<string, string>;
 
@@ -12,22 +13,26 @@ const routes: RouteMap = {
   "/": "home",
   "/about": "about",
   "/uses": "uses",
-  "/blog": "blog",
 };
 
 export const SiteHeader = () => {
   const pathname = usePathname();
 
   const getActiveTab = (path: string) => {
-    return routes[path] ?? "home";
+    if (routes[path]) return routes[path];
+    if (path.startsWith("/blog/")) return "blog";
+    return "default";
   };
 
   const [activeTab, setActiveTab] = useState(getActiveTab(pathname));
 
-  // Update active tab when pathname changes
   useEffect(() => {
     setActiveTab(getActiveTab(pathname));
   }, [pathname]);
+
+  const isMounted = useMount();
+
+  if (!isMounted) return null;
 
   return (
     <header className="mb-16 flex items-center justify-between">
@@ -36,7 +41,8 @@ export const SiteHeader = () => {
           <Image
             src="/signature.webp"
             alt="Kyle's signature"
-            fill
+            width={64}
+            height={40}
             priority
             className="object-contain dark:invert"
           />
@@ -46,24 +52,22 @@ export const SiteHeader = () => {
         <Tabs value={activeTab} onValueChange={setActiveTab}>
           <TabList intent="card">
             <Link href="/">
-              <Tab value="home" aria-current={activeTab === 'home' ? 'page' : undefined}>Home</Tab>
+              <Tab value="home">Home</Tab>
             </Link>
             <Link href="/about">
-              <Tab value="about" aria-current={activeTab === 'about' ? 'page' : undefined}>About</Tab>
+              <Tab value="about">About</Tab>
             </Link>
-            <Tab value="blog" disabled>
-              Blog
-            </Tab>
+            <Tab value="blog" disabled>Blog</Tab>
             <Link href="/uses">
-              <Tab value="uses" aria-current={activeTab === 'uses' ? 'page' : undefined}>Uses</Tab>
+              <Tab value="uses">Uses</Tab>
             </Link>
           </TabList>
-          {/* Hidden TabPanels for accessibility compliance */}
+
           <div className="sr-only">
-            <TabPanel value="home">Home page content</TabPanel>
-            <TabPanel value="about">About page content</TabPanel>
-            <TabPanel value="blog">Blog content</TabPanel>
-            <TabPanel value="uses">Uses page content</TabPanel>
+            <TabPanel value="home" />
+            <TabPanel value="about" />
+            <TabPanel value="blog" />
+            <TabPanel value="uses" />
           </div>
         </Tabs>
       </div>
