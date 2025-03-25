@@ -18,7 +18,7 @@ const avatarStyles = tv({
             // base
             'flex items-center justify-center rounded-md',
             // background color
-            'bg-gray-100 dark:bg-gradient-to-b dark:from-[#2a2a2a] dark:to-[#4e4e4e]',
+            'bg-gray-100 dark:bg-linear-to-b dark:from-[#2a2a2a] dark:to-[#4e4e4e]',
             // text color
             'text-gray-900 dark:text-[#f2f2f2]',
             // border

@@ -24,10 +24,10 @@ export const buttonStyles = tv({
         // hover background color
         "hover:bg-gray-200 dark:hover:bg-[#252525]",
         // focus
-        "focus:outline-none focus:ring-2 focus:ring-gray-300 focus:border-gray-300",
+        "focus:outline-hidden focus:ring-2 focus:ring-gray-300 focus:border-gray-300",
         "dark:focus:ring-[#3a3a3a] dark:focus:border-[#3a3a3a]",
         // shadow
-        "shadow-sm dark:shadow-md",
+        "shadow-xs dark:shadow-md",
       ],
       ghost: [
         // background color

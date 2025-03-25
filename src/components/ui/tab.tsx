@@ -25,9 +25,9 @@ const tabsStyles = tv({
           // hover
           "hover:text-gray-900 dark:hover:text-white",
           // selected state
-          "data-[selected]:text-gray-900 dark:data-[selected]:text-white",
+          "data-selected:text-gray-900 dark:data-selected:text-white",
           // disabled state
-          "data-[disabled]:text-gray-400 data-[disabled]:cursor-not-allowed",
+          "data-disabled:text-gray-400 data-disabled:cursor-not-allowed",
           // transition
           "transition-colors",
         ],
@@ -41,11 +41,11 @@ const tabsStyles = tv({
           // dark mode text and border
           "dark:border-[#3a3a3a]",
           // selected state border
-          "data-[selected]:border-b-transparent",
+          "data-selected:border-b-transparent",
           // hover state
           "hover:bg-gray-100 dark:hover:bg-[#252525]",
           // disabled state
-          "data-[disabled]:text-gray-400 data-[disabled]:cursor-not-allowed",
+          "data-disabled:text-gray-400 data-disabled:cursor-not-allowed",
         ],
         // indicator styling
         indicator: [
@@ -54,7 +54,7 @@ const tabsStyles = tv({
           // border
           "border border-gray-300 dark:border-[#3a3a3a]",
           // shadow and z-index
-          "shadow-sm dark:shadow-md z-[-1]",
+          "shadow-xs dark:shadow-md z-[-1]",
         ],
       },
     },

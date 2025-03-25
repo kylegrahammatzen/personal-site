@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 export const card = tv({
   slots: {
     base: [
-      "grid gap-3 rounded-md shadow-sm p-4",
+      "grid gap-3 rounded-md shadow-xs p-4",
       // disabled state
       "disabled:opacity-50 disabled:pointer-events-none",
       // transition
@@ -24,7 +24,7 @@ export const card = tv({
           // border color
           "border border-gray-300 dark:border-[#3a3a3a]",
           // shadow
-          "shadow-sm dark:shadow-md",
+          "shadow-xs dark:shadow-md",
         ],
         description: "text-gray-600 dark:text-gray-300",
       },

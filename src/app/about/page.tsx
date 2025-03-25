@@ -35,9 +35,9 @@ export default function AboutPage() {
 
                 <Collapsible className='w-full'>
                     <CollapsibleTrigger className="flex items-center gap-1 text-sm font-medium text-blue-600 hover:underline dark:text-blue-400 bg-transparent px-0 py-2">
-                        <ChevronRight className="size-3 transition-all ease-out group-data-[panel-open]:rotate-90" />
-                        <span className="group-data-[panel-open]:hidden">Read more about my backstory</span>
-                        <span className="hidden group-data-[panel-open]:block">Hide backstory</span>
+                        <ChevronRight className="size-3 transition-all ease-out group-data-panel-open:rotate-90" />
+                        <span className="group-data-panel-open:hidden">Read more about my backstory</span>
+                        <span className="hidden group-data-panel-open:block">Hide backstory</span>
                     </CollapsibleTrigger>
 
                     <CollapsiblePanel>

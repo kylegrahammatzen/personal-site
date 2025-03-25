@@ -15,7 +15,7 @@ const collapsible = tv({
             // base layout
             'group flex items-center gap-2 px-2 py-1',
             // interaction
-            'focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed'
+            'focus:outline-hidden disabled:opacity-50 disabled:cursor-not-allowed'
         ],
         panel: [
             // base layout
@@ -23,11 +23,11 @@ const collapsible = tv({
             // interaction
             'overflow-hidden transition-all ease-out',
             // animation states
-            'data-[ending-style]:h-0 data-[starting-style]:h-0'
+            'data-ending-style:h-0 data-starting-style:h-0'
         ],
         content: [
             // base layout
-            'mt-1 flex flex-col gap-2 py-2 pl-7 rounded-sm',
+            'mt-1 flex flex-col gap-2 py-2 pl-7 rounded-xs',
             // background color
             'bg-gray-100 dark:bg-[#2a2a2a]',
             // interaction
