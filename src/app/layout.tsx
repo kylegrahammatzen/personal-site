@@ -22,7 +22,7 @@ const metroSans = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Kyle Matzen | Software Engineer & Entrepreneur",
+  title: "Kyle Graham Matzen | Software Engineer & Entrepreneur",
   description:
     "Software engineer building scalable systems and launching startups like Previgil, Bans.io, and MailCurate. Computer Science student at Rowan University working with clients worldwide.",
   keywords: [
@@ -36,14 +36,14 @@ export const metadata: Metadata = {
     "MailCurate",
   ],
   openGraph: {
-    title: "Kyle Matzen | Software Engineer & Entrepreneur",
+    title: "Kyle Graham Matzen | Software Engineer & Entrepreneur",
     description:
       "US-based engineer building scalable systems and launching startups that solve real business challenges.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kyle Matzen | Software Engineer & Entrepreneur",
+    title: "Kyle Graham Matzen | Software Engineer & Entrepreneur",
     description:
       "US-based engineer building scalable systems and launching startups that solve real business challenges.",
   },
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-  authors: [{ name: "Kyle Matzen" }],
+  authors: [{ name: "Kyle Graham Matzen" }],
 };
 
 type RootLayoutProps = {
