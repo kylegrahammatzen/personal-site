@@ -30,7 +30,7 @@ export default function Home() {
       isExternal: false
     }),
     createItem({
-      link: "#",
+      link: "https://ui.kylegm.com/",
       name: "UI",
       icon: { type: 'acronym', text: 'U' },
       description: "Private UI library for personal projects",
