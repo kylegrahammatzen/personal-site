@@ -83,20 +83,14 @@ export default function Home() {
 
       <SitePageSection>
         <p className="mb-4 text-base leading-relaxed">
-          I build scalable software systems that power applications used by thousands. My expertise includes distributed systems, API design, and cloud infrastructure.
+          I build scalable software systems that power applications used by thousands. My expertise includes distributed systems, backend APIs, and cloud infrastructure.
         </p>
 
         <p className="text-base leading-relaxed">
-          As an entrepreneur, I've launched startups that solve real business challenges. Currently working on{' '}
-          <Link href="https://previgil.com" className={link().base()} rel="preconnect">
-            <span className={link().primary()}>Previgil</span>
-          </Link> for domain management,{' '}
-          <Link href="https://bans.io" className={link().base()} rel="preconnect">
-            <span className={link().primary()}>Bans.io</span>
-          </Link> for gaming communities, and{' '}
-          <Link href="#" className={link().base()}>
-            <span className={link().primary()}>MailCurate</span>
-          </Link> for interactive emails.{' '}
+          I’m currently the Lead Engineer at{' '}
+          <Link href="https://relinked.ai" className={link().base()} rel="preconnect">
+            <span className={link().primary()}>Relinked</span>
+          </Link>, where I help build an AI-driven platform for knowledge delivery and team collaboration. I also take on select freelance software projects for global clients.{' '}
           <Link href="/about" className={link().base()}>
             <span className={link().primary()}>Learn more about me</span>
           </Link>.
