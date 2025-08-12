@@ -87,7 +87,7 @@ export default function Home() {
         </p>
 
         <p className="text-base leading-relaxed">
-          I’m currently the Lead Engineer at{' '}
+          I’m currently the Co-founder, CTO at{' '}
           <Link href="https://relinked.ai" className={link().base()} rel="preconnect">
             <span className={link().primary()}>Relinked</span>
           </Link>, where I help build an AI-driven platform for knowledge delivery and team collaboration. I also take on select freelance software projects for global clients.{' '}
